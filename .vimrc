@@ -81,8 +81,6 @@ autocmd BufWinEnter *.* silent loadview"
 let mapleader = " "
 noremap <leader>w :w<cr>
 noremap <leader>gs :CocSearch 
-"noremap <leader>fs :FZ<cr>
-noremap <leader>fs :CtrlP<cr>
 noremap <leader><cr> <cr><c-w>h:q<cr>
 " Close vim
 noremap <leader>qa :qa!<cr>
@@ -112,7 +110,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         Plug 'jacoborus/tender.vim'
         Plug 'christoomey/vim-tmux-navigator'
         Plug 'morhetz/gruvbox'
-        Plug 'ctrlpvim/ctrlp.vim'
         call plug#end()
         let g:coc_global_extensions = [ 'coc-tsserver' ]
         let g:coc_global_extensions = [ 'coc-html' ]
@@ -132,5 +129,3 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         nmap <silent> gs <Plug>(easymotion-overwin-f2)
         colo gruvbox
         set bg=dark
-        " Remove the underline from enabling cursorline:
-        :imap ii <Esc>
