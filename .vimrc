@@ -81,6 +81,7 @@ autocmd BufWinEnter *.* silent loadview"
 let mapleader = " "
 noremap <leader>w :w<cr>
 noremap <leader>gs :CocSearch 
+noremap <leader>fs :FZ<cr>
 noremap <leader><cr> <cr><c-w>h:q<cr>
 " Close vim
 noremap <leader>qa :qa!<cr>
@@ -107,26 +108,24 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         Plug 'vim-airline/vim-airline'
         Plug 'vim-airline/vim-airline-themes'
         Plug 'easymotion/vim-easymotion'
-        Plug 'jacoborus/tender.vim'
         Plug 'christoomey/vim-tmux-navigator'
-        Plug 'morhetz/gruvbox'
+        Plug 'kamykn/dark-theme.vim'
+        Plug 'ctrlpvim/ctrlp.vim'
+        Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
         call plug#end()
-        let g:coc_global_extensions = [ 'coc-tsserver' ]
-        let g:coc_global_extensions = [ 'coc-html' ]
-        let g:coc_global_extensions = [ 'coc-css' ]
-        let g:coc_global_extensions = [ 'coc-angular' ]
-        let g:coc_global_extensions = [ 'coc-css' ]
-        " For disable preview mode in fuzzy finder
+        let g:coc_global_extensions = ['coc-css','coc-angular','coc-html','coc-tsserver','coc-css']
         let g:fzf_preview_window = []
-        let g:airline_powerline_fonts = 1
-        let g:airline#extensions#tabline#enabled = 1
+        "let g:airline_powerline_fonts = 1
+        "let g:airline#extensions#tabline#enabled = 1
         let g:airline#extensions#tabline#formatter = 'unique_tail'
+        let g:airline_theme = 'violet'
+        let g:airline_solarized_enable_command_color = 1
         let NERDTreeQuitOnOpen=1
-        " GoTo code navigation.
         nmap <silent> gd <Plug>(coc-definition)
         nmap <silent> gy <Plug>(coc-type-definition)
         nmap <silent> gi <Plug>(coc-implementation)
         nmap <silent> gr <Plug>(coc-references)
         nmap <silent> gs <Plug>(easymotion-overwin-f2)
-        colo gruvbox
+        colo darktheme
+        set cursorline
         set bg=dark
