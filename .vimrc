@@ -115,6 +115,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         let g:coc_global_extensions = [ 'coc-html' ]
         let g:coc_global_extensions = [ 'coc-css' ]
         let g:coc_global_extensions = [ 'coc-angular' ]
+        let g:coc_global_extensions = [ 'coc-css' ]
         " For disable preview mode in fuzzy finder
         let g:fzf_preview_window = []
         let g:airline_powerline_fonts = 1
