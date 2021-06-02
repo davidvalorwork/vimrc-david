@@ -116,7 +116,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         call plug#end()
         let g:coc_global_extensions = ['coc-css','coc-angular','coc-html','coc-tsserver','coc-css']
         let g:fzf_preview_window = []
-        let g:airline_powerline_fonts = 2
         let g:airline#extensions#tabline#enabled = 1
         let g:airline#extensions#tabline#formatter = 'unique_tail'
         let g:airline_solarized_enable_command_color = 1
@@ -126,7 +125,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         nmap <silent> gi <Plug>(coc-implementation)
         nmap <silent> gr <Plug>(coc-references)
         nmap <silent> gs <Plug>(easymotion-overwin-f2)
-        colo darktheme
+        colo default
         "let g:airline_theme='darktheme'
         set cursorline
         set bg=dark
