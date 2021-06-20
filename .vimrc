@@ -79,11 +79,11 @@ autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview"
 let mapleader = " "
 noremap <leader>w :w<cr>
-noremap <leader>gs :Ack
+noremap <leader>gs :Ack 
 noremap <leader>fs :FZ<cr>
 noremap <leader><cr> <cr><c-w>h:q<cr>
 
-noremap <leader>qa :wq!<cr>
+noremap <leader>qa :qa!<cr>
 noremap <leader>tn :tabnew<cr>
 noremap <leader>tc :tabc<cr>
 noremap <leader>h :tabp<cr>
@@ -157,7 +157,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         call plug#end()
         let g:coc_global_extensions = ['coc-css','coc-angular','coc-html','coc-tsserver','coc-css']
         let g:fzf_preview_window = []
-        let NERDTreeQuitOnOpen=0
+        let NERDTreeQuitOnOpen=1
 				let g:airline#extensions#tabline#enabled = 1
 				let g:airline#extensions#tabline#formatter = 'unique_tail'
 				inoremap ii <ESC>
