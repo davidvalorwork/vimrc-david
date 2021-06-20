@@ -86,6 +86,7 @@ noremap <leader><cr> <cr><c-w>h:q<cr>
 noremap <leader>qa :qa!<cr>
 noremap <leader>tn :tabnew<cr>
 noremap <leader>tc :tabc<cr>
+noremap <leader>te :term<cr>
 noremap <leader>h :tabp<cr>
 noremap <leader>l :tabn<cr>
 noremap <leader>e :edit 
