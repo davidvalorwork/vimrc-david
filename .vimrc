@@ -79,11 +79,11 @@ autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview"
 let mapleader = " "
 noremap <leader>w :w<cr>
-noremap <leader>gs :CocSearch 
+noremap <leader>gs :Ack
 noremap <leader>fs :FZ<cr>
 noremap <leader><cr> <cr><c-w>h:q<cr>
 
-noremap <leader>qa :qa!<cr>
+noremap <leader>qa :wq!<cr>
 noremap <leader>tn :tabnew<cr>
 noremap <leader>tc :tabc<cr>
 noremap <leader>h :tabp<cr>
@@ -97,6 +97,38 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gs <Plug>(easymotion-overwin-f2)
+nmap <leader> fo <Plug>(coc-format-selected)
+nnoremap <Leader>s :Gblame<enter>
+
+" Nerd Commenter
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+" Ack
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -112,14 +144,23 @@ if empty(glob('~/.vim/autoload/plug.vim'))
           Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
           Plug 'easymotion/vim-easymotion'
           Plug 'christoomey/vim-tmux-navigator'
-          Plug 'kamykn/dark-theme.vim'
           Plug 'morhetz/gruvbox'
-          Plug 'ctrlpvim/ctrlp.vim'
           Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+					Plug 'zivyangll/git-blame.vim'
+					Plug 'vim-airline/vim-airline'
+					Plug 'vim-airline/vim-airline-themes'
+					Plug 'https://github.com/tpope/vim-fugitive'
+					Plug 'mattn/emmet-vim'
+					Plug 'frazrepo/vim-rainbow'
+					Plug 'preservim/nerdcommenter'
+					Plug 'mileszs/ack.vim'
         call plug#end()
         let g:coc_global_extensions = ['coc-css','coc-angular','coc-html','coc-tsserver','coc-css']
         let g:fzf_preview_window = []
-        let NERDTreeQuitOnOpen=1
+        let NERDTreeQuitOnOpen=0
+				let g:airline#extensions#tabline#enabled = 1
+				let g:airline#extensions#tabline#formatter = 'unique_tail'
+				inoremap ii <ESC>
         colo gruvbox
         set cursorline
         set bg=dark
