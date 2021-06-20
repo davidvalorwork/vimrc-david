@@ -98,7 +98,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gs <Plug>(easymotion-overwin-f2)
 nmap <leader> fo <Plug>(coc-format-selected)
-nnoremap <Leader>s :Gblame<enter>
+noremap <Leader>s :Gblame<enter>
+noremap <leader>cd :cd 
 
 " Nerd Commenter
 " Create default mappings
