@@ -8,7 +8,7 @@ filetype off
 syntax on
 
 " For plug-ins to load correctly.
-filetype plugin indent on
+"filetype plugin indent on
 
 " Turn off modelines
 set modelines=0
@@ -54,14 +54,13 @@ set matchpairs+=<:>
 set number
 
 " Set status line display
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\
-"[BUFFER=%n]\ %{strftime('%c')}
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
 
 " Encoding
 set encoding=utf-8
 
 " Highlight matching search patterns
-set hlsearch
+"set hlsearch
 " Enable incremental search
 set incsearch
 " Include matching uppercase words with lowercase search term
@@ -83,15 +82,21 @@ noremap <leader>w :w<cr>
 noremap <leader>gs :CocSearch 
 noremap <leader>fs :FZ<cr>
 noremap <leader><cr> <cr><c-w>h:q<cr>
-" Close vim
+
 noremap <leader>qa :qa!<cr>
 noremap <leader>tn :tabnew<cr>
 noremap <leader>tc :tabc<cr>
 noremap <leader>h :tabp<cr>
 noremap <leader>l :tabn<cr>
 noremap <leader>e :edit 
-noremap <leader>nt :NERDTreeToggle<cr>
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
+noremap <leader>n :NERDTreeToggle<cr>
+
+" Coc commands
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gs <Plug>(easymotion-overwin-f2)
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -99,33 +104,22 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
         endif
         call plug#begin('~/.vim/plugged')
-        Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-        Plug 'pangloss/vim-javascript'    " JavaScript support
-        Plug 'akz92/vim-ionic2'
-        Plug 'leafgarland/typescript-vim' " TypeScript syntax
-        Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-        Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
-        Plug 'vim-airline/vim-airline'
-        Plug 'vim-airline/vim-airline-themes'
-        Plug 'easymotion/vim-easymotion'
-        Plug 'christoomey/vim-tmux-navigator'
-        Plug 'kamykn/dark-theme.vim'
-        Plug 'morhetz/gruvbox'
-        Plug 'ctrlpvim/ctrlp.vim'
-        Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+          Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+          Plug 'pangloss/vim-javascript'    " JavaScript support
+          Plug 'akz92/vim-ionic2'
+          Plug 'leafgarland/typescript-vim' " TypeScript syntax
+          Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+          Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
+          Plug 'easymotion/vim-easymotion'
+          Plug 'christoomey/vim-tmux-navigator'
+          Plug 'kamykn/dark-theme.vim'
+          Plug 'morhetz/gruvbox'
+          Plug 'ctrlpvim/ctrlp.vim'
+          Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
         call plug#end()
         let g:coc_global_extensions = ['coc-css','coc-angular','coc-html','coc-tsserver','coc-css']
         let g:fzf_preview_window = []
-        let g:airline#extensions#tabline#enabled = 1
-        let g:airline#extensions#tabline#formatter = 'unique_tail'
-        let g:airline_solarized_enable_command_color = 1
         let NERDTreeQuitOnOpen=1
-        nmap <silent> gd <Plug>(coc-definition)
-        nmap <silent> gy <Plug>(coc-type-definition)
-        nmap <silent> gi <Plug>(coc-implementation)
-        nmap <silent> gr <Plug>(coc-references)
-        nmap <silent> gs <Plug>(easymotion-overwin-f2)
-        colo default
-        "let g:airline_theme='darktheme'
+        colo gruvbox
         set cursorline
         set bg=dark
