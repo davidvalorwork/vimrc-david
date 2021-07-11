@@ -73,34 +73,8 @@ set smartcase
 set viminfo='100,<9999,s100
 " Map the <Space> key to toggle a selected fold opened/closed.
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
-vnoremap <Space> zf
  " Automatically save and load folds
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview"
-let mapleader = " "
-noremap <leader>w :w<cr>
-noremap <leader>gs :Ack 
-noremap <leader>fs :FZ<cr>
-noremap <leader><cr> <cr><c-w>h:q<cr>
 
-noremap <leader>qa :qa!<cr>
-noremap <leader>tn :tabnew<cr>
-noremap <leader>tc :tabc<cr>
-noremap <leader>te :term<cr>
-noremap <leader>h :tabp<cr>
-noremap <leader>l :tabn<cr>
-noremap <leader>e :edit 
-noremap <leader>n :NERDTreeToggle<cr>
-
-" Coc commands
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gs <Plug>(easymotion-overwin-f2)
-nmap <leader> fo <Plug>(coc-format-selected)
-noremap <Leader>s :Gblame<enter>
-noremap <leader>cd :cd 
 
 " Nerd Commenter
 " Create default mappings
@@ -129,8 +103,32 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview"
 
-" Ack
+" Keys
+let mapleader = " "
+noremap <leader>w :w<cr>
+noremap <leader>gs :Ack 
+noremap <leader>fs :FZ<cr>
+noremap <leader><cr> <cr><c-w>h:q<cr>
+vnoremap <Space> zf
+noremap <leader>qa :qa!<cr>
+noremap <leader>tn :tabnew<cr>
+noremap <leader>tc :tabc<cr>
+noremap <leader>te :term<cr>
+noremap <leader>h :tabp<cr>
+noremap <leader>l :tabn<cr>
+noremap <leader>e :edit 
+noremap <leader>n :NERDTreeToggle<cr>
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gs <Plug>(easymotion-overwin-f2)
+nmap <leader> fo <Plug>(coc-format-selected)
+noremap <Leader>s :Gblame<enter>
+noremap <leader>cd :cd 
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -162,7 +160,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         let NERDTreeQuitOnOpen=1
 				let g:airline#extensions#tabline#enabled = 1
 				let g:airline#extensions#tabline#formatter = 'unique_tail'
-				inoremap ii <ESC>
         colo gruvbox
         set cursorline
         set bg=dark
