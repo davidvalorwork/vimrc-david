@@ -25,7 +25,7 @@ set pastetoggle=<F2>
 "width of your screen.
 "set textwidth=79
 "set formatoptions=tcqrn1
-"set tabstop=2
+set tabstop=2
 "set shiftwidth=2
 "set softtabstop=2
 "set expandtab
