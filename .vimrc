@@ -153,6 +153,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 					Plug 'mattn/emmet-vim'
 					Plug 'frazrepo/vim-rainbow'
 					Plug 'preservim/nerdcommenter'
+					"Plug 'micha/vim-colors-solarized'
+					Plug 'joshdick/onedark.vim'
 					Plug 'mileszs/ack.vim'
         call plug#end()
         let g:coc_global_extensions = ['coc-css','coc-angular','coc-html','coc-tsserver','coc-css']
@@ -160,6 +162,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         let NERDTreeQuitOnOpen=1
 				let g:airline#extensions#tabline#enabled = 1
 				let g:airline#extensions#tabline#formatter = 'unique_tail'
-        colo gruvbox
-        set cursorline
+        colo onedark
+				"set cursorline
+				set nocursorline
         set bg=dark
