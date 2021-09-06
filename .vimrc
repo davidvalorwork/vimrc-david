@@ -129,6 +129,10 @@ nmap <silent> gs <Plug>(easymotion-overwin-f2)
 nmap <leader> fo <Plug>(coc-format-selected)
 noremap <Leader>s :Gblame<enter>
 noremap <leader>cd :cd 
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
