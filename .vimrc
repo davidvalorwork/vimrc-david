@@ -113,7 +113,7 @@ noremap <leader>gs :Ack
 noremap <leader>fs :FZ<cr>
 noremap <leader><cr> <cr><c-w>h:q<cr>
 vnoremap <Space> zf
-noremap <leader>m :mksession lastsession.vim<cr>
+noremap <leader>m :mksession! lastsession.vim <cr>
 noremap <leader>qa :qa!<cr>
 noremap <leader>tn :tabnew<cr>
 noremap <leader>tc :tabc<cr>
