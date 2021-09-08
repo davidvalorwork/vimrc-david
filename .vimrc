@@ -113,6 +113,7 @@ noremap <leader>gs :Ack
 noremap <leader>fs :FZ<cr>
 noremap <leader><cr> <cr><c-w>h:q<cr>
 vnoremap <Space> zf
+noremap <leader>m :mksession lastsession.vim<cr>
 noremap <leader>qa :qa!<cr>
 noremap <leader>tn :tabnew<cr>
 noremap <leader>tc :tabc<cr>
@@ -121,7 +122,10 @@ noremap <leader>h :tabp<cr>
 noremap <leader>l :tabn<cr>
 noremap <leader>e :edit 
 noremap <leader>n :NERDTreeToggle<cr>
-nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> <Left> :vertical resize -2 <cr>
+nmap <silent> <Right> :vertical resize +2  <cr>
+nmap <silent> <Up> :resize -2 <cr>
+nmap <silent> <Down> :resize +2 <cr>
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
