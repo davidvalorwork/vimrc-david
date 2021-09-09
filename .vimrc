@@ -1,5 +1,8 @@
 set nocompatible
 set nolist
+set nowrap
+set nobackup
+set noswapfile
 set rnu
 " Helps force plug-ins to load correctly when it is turned back on below.
 filetype off
@@ -13,8 +16,6 @@ syntax on
 " Turn off modelines
 set modelines=0
 
-" Automatically wrap text that extends beyond the screen length.
-"set wrap
 " Vim's auto indentation feature does not work properly with text copied
 "from outside of Vim. Press the <F2> key to toggle paste mode on/off.
 nnoremap <F2> :set invpaste paste?<CR>
@@ -60,7 +61,7 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFE
 set encoding=utf-8
 
 " Highlight matching search patterns
-"set hlsearch
+set hlsearch
 " Enable incremental search
 set incsearch
 " Include matching uppercase words with lowercase search term
