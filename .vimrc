@@ -122,6 +122,7 @@ noremap <leader>te :term<cr>
 noremap <leader>h :tabp<cr>
 noremap <leader>l :tabn<cr>
 noremap <leader>e :edit 
+noremap <leader>u :UndotreeShow<cr> 
 noremap <leader>n :NERDTreeToggle<cr>
 nmap <silent> <Left> :vertical resize -2 <cr>
 nmap <silent> <Right> :vertical resize +2  <cr>
@@ -165,12 +166,21 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 					"Plug 'micha/vim-colors-solarized'
 					Plug 'joshdick/onedark.vim'
 					Plug 'mileszs/ack.vim'
+					Plug 'https://github.com/kien/ctrlp.vim.git'
+					Plug 'mbbill/undotree'
         call plug#end()
         let g:coc_global_extensions = ['coc-css','coc-angular','coc-html','coc-tsserver','coc-css']
         let g:fzf_preview_window = []
         let NERDTreeQuitOnOpen=1
 				let g:airline#extensions#tabline#enabled = 1
 				let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+				if executable ('rg')
+					let g:rg_derive_root='true'
+				endif
+
+				let g:ctrlp_user_command = ['.git/','git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
         colo onedark
 				"set cursorline
 				set nocursorline
