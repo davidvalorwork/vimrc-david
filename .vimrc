@@ -168,12 +168,27 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 					Plug 'mileszs/ack.vim'
 					Plug 'https://github.com/kien/ctrlp.vim.git'
 					Plug 'mbbill/undotree'
+          Plug 'Lokaltog/powerline'                 " Powerline fonts plugin
+          Plug 'fisadev/FixedTaskList.vim'          " Pending tasks list
+          Plug 'rosenfeld/conque-term'              " Consoles as buffers
+          Plug 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
+          Plug 'flazz/vim-colorschemes'             " Colorschemes
         call plug#end()
         let g:coc_global_extensions = ['coc-css','coc-angular','coc-html','coc-tsserver','coc-css']
         let g:fzf_preview_window = []
         let NERDTreeQuitOnOpen=1
-				let g:airline#extensions#tabline#enabled = 1
-				let g:airline#extensions#tabline#formatter = 'unique_tail'
+        let g:Powerline_symbols = 'fancy'
+        set encoding=utf-8
+        set t_Co=256
+        set fillchars+=stl:\ ,stlnc:\
+        set termencoding=utf-8
+        set term=xterm-256color
+        set guifont=Inconsolata\ for\ Powerline:h15
+        let g:airline_theme='badwolf'
+        let g:airline#extensions#tabline#enabled=1
+        let g:airline#extensions#tabline#formatter='unique_tail'
+        let g:airline_powerline_fonts=1
+
 
 				if executable ('rg')
 					let g:rg_derive_root='true'
@@ -182,6 +197,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 				let g:ctrlp_user_command = ['.git/','git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
         colo onedark
-				"set cursorline
-				set nocursorline
+				set cursorline
+				"set nocursorline
         set bg=dark
