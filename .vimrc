@@ -1,9 +1,11 @@
 set nocompatible
 set nolist
-set nowrap
 set nobackup
-set noswapfile
+set nowritebackup
 set rnu
+set noexpandtab
+"set nowrap
+"set textwidth=0 wrapmargin=0
 " Helps force plug-ins to load correctly when it is turned back on below.
 filetype off
 
@@ -29,7 +31,7 @@ set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab
+"set expandtab
 set noshiftround
 
 " Display 5 lines above/below the cursor when scrolling with a mouse.
@@ -126,8 +128,8 @@ noremap <leader>u :UndotreeShow<cr>
 noremap <leader>n :NERDTreeToggle<cr>
 nmap <silent> <Left> :vertical resize -2 <cr>
 nmap <silent> <Right> :vertical resize +2  <cr>
-nmap <silent> <Up> :resize -2 <cr>
-nmap <silent> <Down> :resize +2 <cr>
+"nmap <silent> <Up> :resize -2 <cr>
+"nmap <silent> <Down> :resize +2 <cr>
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -135,10 +137,7 @@ nmap <silent> gs <Plug>(easymotion-overwin-f2)
 nmap <leader> fo <Plug>(coc-format-selected)
 noremap <Leader>s :Gblame<enter>
 noremap <leader>cd :cd 
-noremap <Leader>y "*y
-noremap <Leader>p "*p
-noremap <Leader>Y "+y
-noremap <Leader>P "+p
+noremap <Leader>y "+y
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -146,9 +145,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
         endif
         call plug#begin('~/.vim/plugged')
-          Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
           Plug 'pangloss/vim-javascript'    " JavaScript support
-          Plug 'akz92/vim-ionic2'
           Plug 'leafgarland/typescript-vim' " TypeScript syntax
           Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
           Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
@@ -163,14 +160,16 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 					Plug 'mattn/emmet-vim'
 					Plug 'frazrepo/vim-rainbow'
 					Plug 'preservim/nerdcommenter'
-					"Plug 'micha/vim-colors-solarized'
 					Plug 'joshdick/onedark.vim'
+          Plug 'kamykn/dark-theme.vim'
 					Plug 'mileszs/ack.vim'
 					Plug 'https://github.com/kien/ctrlp.vim.git'
 					Plug 'mbbill/undotree'
+          Plug 'storyn26383/vim-vue'
           Plug 'Lokaltog/powerline'                 " Powerline fonts plugin
           Plug 'fisadev/FixedTaskList.vim'          " Pending tasks list
           Plug 'rosenfeld/conque-term'              " Consoles as buffers
+          Plug 'sjl/badwolf'
           Plug 'tpope/vim-surround'                 " Parentheses, brackets, quotes, XML tags, and more
           Plug 'flazz/vim-colorschemes'             " Colorschemes
         call plug#end()
@@ -187,7 +186,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         let g:airline_theme='badwolf'
         let g:airline#extensions#tabline#enabled=1
         let g:airline#extensions#tabline#formatter='unique_tail'
-        let g:airline_powerline_fonts=1
+        "let g:airline_powerline_fonts=1
 
 
 				if executable ('rg')
@@ -196,7 +195,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 
 				let g:ctrlp_user_command = ['.git/','git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-        colo onedark
-				set cursorline
-				"set nocursorline
+        colo gruvbox
         set bg=dark
+        colo badwolf
+        syntax enable
+        "colo darktheme
+				"set nocursorline
+				set cursorline
