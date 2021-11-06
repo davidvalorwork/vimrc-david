@@ -203,7 +203,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-l>"
 
 colo gruvbox
+set encoding=utf-8
 set bg=dark
 colo badwolf
 syntax enable
 set cursorline
+
+
