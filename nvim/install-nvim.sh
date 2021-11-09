@@ -1,9 +1,21 @@
+# INSTALLING NEOVIM
 apt install neovim
 pip3 install --user neovim
 mkdir -p ~/.config/nvim
-cp init.vim ~/.config/nvim/init.vim
-nvim ~/.config/nvim/init.vim
 
+# REMOVING OLD VIM FILES
+rm -f ~/.config/nvim/init.vim
+rm -f ~/.vimrc
+rm -rf -f ~/.vim
+rm -f ~/.zshrc
 
-# wget https://github.com/Termux-pod/termux-pod/blob/main/arm/python/python_3.8.6_arm.deb?raw=true
-# dpkg -i ./python_3.8.6_arm.deb
+# NVIM CONFIG
+cp files/init.vim ~/.config/nvim/init.vim
+
+# COPYING NEW FILES
+cp files/.vimrc ~/.vimrc
+cp files/.zshrc ~/.zshrc
+cp -rf files/.vim ~/.vim
+
+# OPENING VIM
+nvim ~/.vimrc
