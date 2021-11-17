@@ -8,6 +8,7 @@ rm -f ~/.config/nvim/init.vim
 rm -f ~/.vimrc
 rm -rf -f ~/.vim
 rm -f ~/.zshrc
+rm -f ~/.gitconfig
 
 # NVIM CONFIG
 cp files/init.vim ~/.config/nvim/init.vim
