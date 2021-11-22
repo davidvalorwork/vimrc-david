@@ -16,9 +16,9 @@ so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
 set bg=dark
-colorscheme dracula
+colorscheme badwolf
 let g:gruvbox_contrast_dark = "hard"
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 set laststatus=2
 set noshowmode
 

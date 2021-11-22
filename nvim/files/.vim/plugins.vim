@@ -12,6 +12,7 @@ Plug 'itchyny/lightline.vim'
 " Themes
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'sjl/badwolf'
 Plug 'shinchu/lightline-gruvbox.vim'
 
 " Tree
