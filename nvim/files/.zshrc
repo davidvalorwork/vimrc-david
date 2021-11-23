@@ -154,3 +154,4 @@ export PATH=”/root/.local/bin:/root/.local/bin:/usr/local/sbin:/usr/local/bin:
 
 alias b=bash
 alias v=nvim
+export PATH="$PATH:/opt/mssql-tools/bin"
