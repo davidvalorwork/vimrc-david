@@ -1,4 +1,8 @@
 # INSTALLING NEOVIM
+apt install zsh
+apt install silversearcher-ag
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 apt install neovim
 pip3 install --user neovim
 mkdir -p ~/.config/nvim
@@ -8,6 +12,7 @@ rm -f ~/.config/nvim/init.vim
 rm -f ~/.vimrc
 rm -rf -f ~/.vim
 rm -f ~/.zshrc
+rm -f ~/.gitconfig
 
 # NVIM CONFIG
 cp files/init.vim ~/.config/nvim/init.vim
@@ -15,6 +20,7 @@ cp files/init.vim ~/.config/nvim/init.vim
 # COPYING NEW FILES
 cp files/.vimrc ~/.vimrc
 cp files/.zshrc ~/.zshrc
+cp files/.gitconfig ~/.gitconfig
 cp -rf files/.vim ~/.vim
 
 # OPENING VIM

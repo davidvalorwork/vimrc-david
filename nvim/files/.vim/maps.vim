@@ -1,5 +1,11 @@
 let mapleader=" "
 
+" escape insert mode
+imap ii <ESC>
+
+" tabs
+nnoremap <Leader>m :tabnew<CR>
+
 " testing
 nnoremap <Leader>t :TestNearest<CR>
 nnoremap <Leader>T :TestFile<CR>
@@ -22,9 +28,10 @@ cnoreabbrev find NERDTreeFind
 cnoreabbrev diff Gdiff
 
 " plugs
-map <Leader>nt :NERDTreeFind<CR>
+map <Leader>n :NERDTreeFind<CR>
 map <Leader>p :Files<CR>
 map <Leader>ag :Ag<CR>
+map <C-p> :FZF<CR>
 
 " tmux navigator
 nnoremap <silent> <Leader><C-h> :TmuxNavigateLeft<cr>
