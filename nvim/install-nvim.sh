@@ -29,6 +29,7 @@ cp files/.bashrc ~/.bashrc
 cp files/.tmux.conf.local ~/.tmux.conf.local
 cp files/.tmux.conf ~/.tmux.conf
 cp -r files/.tmux ~/.tmux
+cp -r files/.oh-my-zsh ~/.oh-my-zsh
 cp -r files/.vim ~/.vim
 
 # OPENING VIM
