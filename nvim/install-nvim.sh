@@ -16,6 +16,7 @@ rm -f ~/.bashrc
 rm -f ~/.tmux.conf.local
 rm -f ~/.tmux.conf
 rm -rf ~/.tmux
+rm -rf ~/.oh-my-zsh
 rm -rf ~/zsh-syntax-highlighting
 rm -rf ~/zsh
 rm -f ~/.gitconfig

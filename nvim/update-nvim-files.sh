@@ -26,8 +26,10 @@ echo [UpdateNvim] copying ~/.tmux ./files
 cp -r ~/.tmux ./files
 echo [UpdateNvim] copying ~/zsh-syntax-highlighting ./files
 cp -r ~/zsh-syntax-highlighting ./files
+rm -rf ./zsh-syntax-highlighting/.git
 echo [UpdateNvim] copying ~/zsh ./files
 cp -r ~/zsh ./files
+rm -rf ./zsh/.git
 echo [UpdateNvim] removing ./files/.tmux/.git
 rm -rf ./files/.tmux/.git
 echo [UpdateNvim] copying cp -r ~/.vim ./files
