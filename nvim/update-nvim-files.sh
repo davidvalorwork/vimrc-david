@@ -24,6 +24,10 @@ echo [UpdateNvim] removing ./files/.oh-my-zsh/.git
 rm -rf ./files/.oh-my-zsh/.git
 echo [UpdateNvim] copying ~/.tmux ./files
 cp -r ~/.tmux ./files
+echo [UpdateNvim] copying ~/zsh-syntax-highlighting ./files
+cp -r ~/zsh-syntax-highlighting ./files
+echo [UpdateNvim] copying ~/zsh ./files
+cp -r ~/zsh ./files
 echo [UpdateNvim] removing ./files/.tmux/.git
 rm -rf ./files/.tmux/.git
 echo [UpdateNvim] copying cp -r ~/.vim ./files

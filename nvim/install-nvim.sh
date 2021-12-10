@@ -16,6 +16,8 @@ rm -f ~/.bashrc
 rm -f ~/.tmux.conf.local
 rm -f ~/.tmux.conf
 rm -rf ~/.tmux
+rm -rf ~/zsh-syntax-highlighting
+rm -rf ~/zsh
 rm -f ~/.gitconfig
 
 # NVIM CONFIG
@@ -28,6 +30,8 @@ cp files/.gitconfig ~/.gitconfig
 cp files/.bashrc ~/.bashrc
 cp files/.tmux.conf.local ~/.tmux.conf.local
 cp files/.tmux.conf ~/.tmux.conf
+cp -r ./files/zsh-syntax-highlighting ~/zsh-syntax-highlighting
+cp -r ./files/zsh ~/zsh
 cp -r files/.tmux ~/.tmux
 cp -r files/.oh-my-zsh ~/.oh-my-zsh
 cp -r files/.vim ~/.vim
