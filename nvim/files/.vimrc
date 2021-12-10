@@ -16,9 +16,12 @@ so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
 set bg=dark
-colorscheme badwolf
+colorscheme dracula
 let g:gruvbox_contrast_dark = "hard"
 hi Normal guibg=NONE ctermbg=NONE
+let g:airline_theme='base16_dracula'
+let g:airline_powerline_fonts = 1
+let g:airline_symbols = {}
 set laststatus=2
 set noshowmode
 

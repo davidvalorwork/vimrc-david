@@ -12,6 +12,10 @@ rm -f ~/.config/nvim/init.vim
 rm -f ~/.vimrc
 rm -rf -f ~/.vim
 rm -f ~/.zshrc
+rm -f ~/.bashrc
+rm -f ~/.tmux.conf.local
+rm -f ~/.tmux.conf
+rm -rf ~/.tmux
 rm -f ~/.gitconfig
 
 # NVIM CONFIG
@@ -21,7 +25,11 @@ cp files/init.vim ~/.config/nvim/init.vim
 cp files/.vimrc ~/.vimrc
 cp files/.zshrc ~/.zshrc
 cp files/.gitconfig ~/.gitconfig
-cp -rf files/.vim ~/.vim
+cp ~/.bashrc
+cp ~/.tmux.conf.local
+cp ~/.tmux.conf
+cp ~/.tmux
+cp -r files/.vim ~/.vim
 
 # OPENING VIM
 nvim ~/.vimrc

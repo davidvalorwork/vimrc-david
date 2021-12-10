@@ -14,6 +14,8 @@ Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sjl/badwolf'
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Tree
 Plug 'scrooloose/nerdtree'
