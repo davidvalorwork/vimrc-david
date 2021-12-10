@@ -28,7 +28,7 @@ cp files/.gitconfig ~/.gitconfig
 cp ~/.bashrc
 cp ~/.tmux.conf.local
 cp ~/.tmux.conf
-cp ~/.tmux
+cp -r ~/.tmux
 cp -r files/.vim ~/.vim
 
 # OPENING VIM
