@@ -25,10 +25,10 @@ cp files/init.vim ~/.config/nvim/init.vim
 cp files/.vimrc ~/.vimrc
 cp files/.zshrc ~/.zshrc
 cp files/.gitconfig ~/.gitconfig
-cp ~/.bashrc
-cp ~/.tmux.conf.local
-cp ~/.tmux.conf
-cp -r ~/.tmux
+cp files/.bashrc ~/.bashrc
+cp files/.tmux.conf.local ~/.tmux.conf.local
+cp files/.tmux.conf ~/.tmux.conf
+cp -r files/.tmux ~/.tmux
 cp -r files/.vim ~/.vim
 
 # OPENING VIM
