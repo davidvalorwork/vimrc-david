@@ -24,6 +24,7 @@ cd ~
 apt install python3 -y
 apt install pip -y
 apt install zsh -y
+apt install peco -y
 apt install silversearcher-ag -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
