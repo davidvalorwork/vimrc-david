@@ -1,7 +1,7 @@
 # REMOVING OLD VIM FILES
 rm -f ~/.config/nvim/init.vim
 rm -f ~/.vimrc
-rm -rf -f ~/.vim
+#rm -rf -f ~/.vim
 rm -f ~/.zshrc
 rm -f ~/.tmux.conf.local
 rm -f ~/.tmux.conf
@@ -16,8 +16,7 @@ cp files/.zshrc ~/.zshrc
 cp files/.gitconfig ~/.gitconfig
 cp files/.tmux.conf.local ~/.tmux.conf.local
 cp files/.tmux.conf ~/.tmux.conf
-cp -r ./files/zsh-syntax-highlighting ~/zsh-syntax-highlighting
-cp -r files/.vim ~/.vim
+#cp -r files/.vim ~/.vim
 
 
 # INSTALLING NEOVIM
@@ -30,7 +29,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-git clone https://github.com/zsh-users/zsh-autosuggestions \${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 apt install neovim
 pip3 install --user neovim
