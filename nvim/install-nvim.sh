@@ -1,7 +1,7 @@
 # REMOVING OLD VIM FILES
 rm -f ~/.config/nvim/init.vim
 rm -f ~/.vimrc
-#rm -rf -f ~/.vim
+rm -rf -f ~/.vim
 rm -f ~/.zshrc
 rm -f ~/.tmux.conf.local
 rm -f ~/.tmux.conf
@@ -16,7 +16,7 @@ cp files/.zshrc ~/.zshrc
 cp files/.gitconfig ~/.gitconfig
 cp files/.tmux.conf.local ~/.tmux.conf.local
 cp files/.tmux.conf ~/.tmux.conf
-#cp -r files/.vim ~/.vim
+cp -r files/.vim ~/.vim
 
 
 # INSTALLING NEOVIM
