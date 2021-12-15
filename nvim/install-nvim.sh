@@ -23,6 +23,7 @@ cp -r files/.vim ~/.vim
 cd ~
 apt-get install -y colorize
 apt install nodejs -y
+apt install curl -y
 apt install npm -y
 apt install python3 -y
 apt install pip -y
