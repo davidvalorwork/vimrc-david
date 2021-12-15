@@ -1,4 +1,5 @@
 # REMOVING OLD VIM FILES
+rm -rf ~/.oh-my-zsh
 rm -f ~/.config/nvim/init.vim
 rm -f ~/.vimrc
 rm -rf -f ~/.vim
