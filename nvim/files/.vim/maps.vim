@@ -10,7 +10,8 @@ nnoremap <Leader>e :edit
 nnoremap <Leader>c :cd 
 
 " Copy in clipboard
-nnoremap <Leader>y :"+y<CR>
+nnoremap <Leader>y :"+yy<CR>
+xmap <Leader>y :"+y
 
 " escape insert mode
 imap ii <ESC>
