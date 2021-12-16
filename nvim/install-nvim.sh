@@ -20,10 +20,10 @@ cp files/.tmux.conf ~/.tmux.conf
 cp -r files/.vim ~/.vim
 
 # DRACULA TERMINAL
-sudo apt-get install dconf-cli -y
-git clone https://github.com/dracula/gnome-terminal
-cd gnome-terminal
-./install.sh
+# sudo apt-get install dconf-cli -y
+# git clone https://github.com/dracula/gnome-terminal
+# cd gnome-terminal
+# ./install.sh
 
 # INSTALLING NEOVIM
 cd ~
