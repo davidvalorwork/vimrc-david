@@ -13,7 +13,6 @@ cp files/init.vim ~/.config/nvim/init.vim
 
 # COPYING NEW FILES
 cp files/.vimrc ~/.vimrc
-cp files/.zshrc ~/.zshrc
 cp files/.gitconfig ~/.gitconfig
 cp files/.tmux.conf.local ~/.tmux.conf.local
 cp files/.tmux.conf ~/.tmux.conf
@@ -38,8 +37,9 @@ apt install peco -y
 apt install silversearcher-ag -y
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+rm -f ~/.zshrc
+cp files/.zshrc ~/.zshrc
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
