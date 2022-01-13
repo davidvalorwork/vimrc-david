@@ -1,18 +1,5 @@
 let mapleader=" "
 
-" Exit vim now
-nnoremap <Leader>QA :qa!<CR>
-
-" Edit file
-nnoremap <Leader>e :edit 
-
-" Using CD
-nnoremap <Leader>c :cd 
-
-" Copy in clipboard
-nnoremap <Leader>y :"+yy<CR>
-xmap <Leader>y :"+y
-
 " escape insert mode
 imap ii <ESC>
 
