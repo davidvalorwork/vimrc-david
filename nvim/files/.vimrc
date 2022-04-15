@@ -1,25 +1,25 @@
 set number
-set mouse=a
 set numberwidth=1
+set relativenumber
 set clipboard=unnamed
 syntax on
 set showcmd
 set ruler
-set cursorline
+"set cursorline
 set encoding=utf-8
 set showmatch
 set termguicolors
 set sw=2
-set relativenumber
 so ~/.vim/plugins.vim
 so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
-"set bg=dark
-colorscheme nord
+set bg=dark
+colorscheme fahrenheit
+"colorscheme default
+let g:airline_powerline_fonts = 1
 let g:gruvbox_contrast_dark = "hard"
-hi Normal guibg=NONE ctermbg=NONE
-let g:airline_theme='base16_nord'
+"hi Normal guibg=NONE ctermbg=NONE
 let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
 set laststatus=2

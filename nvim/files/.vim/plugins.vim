@@ -18,6 +18,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sjl/badwolf'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'arcticicestudio/nord-vim'
+Plug 'fcpg/vim-fahrenheit'
 
 " Tree
 Plug 'scrooloose/nerdtree'

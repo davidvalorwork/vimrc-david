@@ -54,3 +54,5 @@
 	process = git-lfs filter-process
 [ghq]
   root = ~/.ghq
+[http]
+	sslverify = false

@@ -165,3 +165,8 @@ alias b=bash
 alias v=nvim
 export PATH="$PATH:/opt/mssql-tools/bin"
 clear
+alias c=./commit.sh
+alias e=exit
+alias cls=clear
+alias n="bash ../scripts/deploy-ubuntu-apache.sh"
+alias cr="./crono.sh"
