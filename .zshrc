@@ -19,6 +19,7 @@ alias savezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
 ## Git
 alias gcom='git add . && echo "Type commit message" && read commitMsj && git commit -m "$commitMsj" && git pull && git push'
 ## Notas commands
+alias createnotas='cd ~ && git clone git@github.com:davidvalorwork/notas.git'
 alias c=./commit.sh
 alias not='cd ~/projects/notas '
 alias cr="./crono.sh"
