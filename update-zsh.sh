@@ -16,6 +16,6 @@ fi
 if [[ $option == 2 ]]
 then
 	echo Replacing zsrhc
-	# rm -rf ~/.zshrc
-	# cp ./.zshrc ~
+ 	rm -rf ~/.zshrc
+	cp ./.zshrc ~
 fi
