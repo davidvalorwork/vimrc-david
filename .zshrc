@@ -14,7 +14,7 @@ alias z='vi ~/.zshrc && zsh'
 alias h='htop'
 alias vconf='vi ~/.vimrc'
 alias h='htop'
-alias vimrcdavid='cd ~/projects/vimrc-david && v'
+alias vidav='cd ~/projects/vimrc-david && v'
 alias savezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
 ## Git
 alias gcom='git add . && echo "Type commit message" && read commitMsj && git commit -m "$commitMsj" && git pull && git push'
