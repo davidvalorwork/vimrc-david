@@ -16,6 +16,8 @@ fi
 if [[ $option == 2 ]]
 then
 	echo Replacing zsrhc
+	cd ~/projects/vimrc-david
+	git pull
  	rm -rf ~/.zshrc
 	cp ./.zshrc ~
 fi
