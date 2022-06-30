@@ -1,5 +1,8 @@
 let mapleader=" "
 
+" For snippets
+nnoremap <Leader>' :CocCommand snippets.editSnippets<CR>
+
 " escape insert mode
 imap ii <ESC>
 
