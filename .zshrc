@@ -13,12 +13,16 @@ alias n="bash ../scripts/deploy-ubuntu-apache.sh"
 alias z='vi ~/.zshrc && zsh'
 alias h='htop'
 alias vconf='vi ~/.vimrc'
+alias vplug='vi ~/.vim/plugins.vim'
+alias vplugc='vi ~/.vim/plugin-config.vim'
+alias vmap='vi ~/.vim/maps.vim'
 alias h='htop'
 alias vidav='cd ~/projects/vimrc-david'
 alias savezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
 ## Git
 alias gcom='git add . && echo "Type commit message" && read commitMsj && git commit -m "$commitMsj" && git pull && git push'
 alias gpl='git pull'
+alias ggu='git gui'
 ## Notas commands
 alias createnotas='cd ~ && git clone git@github.com:davidvalorwork/notas.git'
 alias c=./commit.sh
@@ -33,6 +37,9 @@ alias notgr='cd ~/projects/notas && v info/other/finanzas/programacion/gruposip_
 alias notorg='cd ~/projects/notas && v info/organization_system.md'
 alias kat2='v ~/projects/notas/info/other/social/sargin/kat2.md'
 alias notday='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && v $year/$month/$day.md'
+alias notcarro='v ~/projects/notas/info/carro.md'
+alias notconse='v ~/projects/notas/info/other/finanzas/programacion/consejos.md'
+alias notvim='v ~/projects/notas/info/other/finanzas/programacion/vim.md'
 ## Enter in repos Geoselfie
 alias geou='cd /home/geoselfie/Interface'
 alias geob='cd ~/projects/geoselfie/geoselfie-github/Backend'
@@ -52,12 +59,14 @@ alias menu='cd ~/projects/geoselfie/geoselfie-github/AWS && bash menu.sh'
 alias graf='cd ~/projects/gruposip/_analytiko/front'
 alias nglimit='node --max_old_space_size=1100 ./node_modules/@angular/cli/bin/ng serve'
 alias grab='cd ~/projects/gruposip/_analytiko/back'
+alias grabn='cd ~/projects/gruposip/analytiko-backend'
 alias grdeldb='cd ../scripts && bash drop-databases.sh V1su4l1z4c10nm3m0r1z && cd ../back'
 alias grnode='nodemon app.js --prod'
 alias grmss='systemctl start mssql-server'
 alias grmsss='systemctl stop mssql-server'
 ## Nautilus
 alias dirimg='nautilus /home/davidvalorwork/Pictures'
+alias dirdown='nautilus /home/davidvalorwork/Downloads'
 alias dirvid='nautilus /home/davidvalorwork/Videos'
 ## Personal
 alias rendervids='bash ~/projects/personal/encode-upload-youtube-videos/handbrake.sh'
