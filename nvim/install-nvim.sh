@@ -1,11 +1,11 @@
 # REMOVING OLD VIM FILES
-sudo rm -rf ~/.oh-my-zsh
-sudo rm -f ~/.config/nvim/init.vim
-sudo rm -f ~/.vimrc
-sudo rm -rf -f ~/.vim
-sudo rm -f ~/.tmux.conf.local
-sudo rm -f ~/.tmux.conf
-sudo rm -f ~/.gitconfig
+rm -rf ~/.oh-my-zsh
+rm -f ~/.config/nvim/init.vim
+rm -f ~/.vimrc
+rm -rf -f ~/.vim
+rm -f ~/.tmux.conf.local
+rm -f ~/.tmux.conf
+rm -f ~/.gitconfig
 
 # NVIM CONFIG
 mkdir -p ~/.config/nvim
@@ -19,23 +19,23 @@ cp files/.tmux.conf ~/.tmux.conf
 cp -r files/.vim ~/.vim
 
 # DRACULA TERMINAL
-# sudo apt-get install dconf-cli -y
+# apt-get install dconf-cli -y
 # git clone https://github.com/dracula/gnome-terminal
 # cd gnome-terminal
 # ./install.sh
 
 # INSTALLING NEOVIM
-sudo apt remove zsh -y
+apt remove zsh -y
 cd ~
-sudo apt-get install -y colorize
-sudo apt install nodejs -y
-sudo apt install curl -y
-sudo apt install npm -y
-sudo apt install python3 -y
-sudo apt install pip -y
-sudo apt install zsh -y
-sudo apt install peco -y
-sudo apt install silversearcher-ag -y
+apt-get install -y colorize
+apt install nodejs -y
+apt install curl -y
+apt install npm -y
+apt install python3 -y
+apt install pip -y
+apt install zsh -y
+apt install peco -y
+apt install silversearcher-ag -y
 
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -56,7 +56,7 @@ cp files/.zshrc ~/
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-sudo apt install neovim
+apt install neovim
 pip3 install --user neovim
 
 # OPENING VIM
