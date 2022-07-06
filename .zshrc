@@ -29,7 +29,9 @@ alias c=./commit.sh
 alias not='cd ~/projects/notas '
 alias cr='echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
 alias notgeo='cd ~/projects/notas && v info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
+alias notgeoc='cd ~/projects/notas && code info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
 alias notga='cd ~/projects/notas && v info/gastos-mensuales.md'
+alias notgac='cd ~/projects/notas && code info/gastos-mensuales.md'
 alias notre='cd ~/projects/notas && v info/recordatorio.md'
 alias notim='cd ~/projects/notas && v info/other/finanzas/importInf.md'
 alias notdad='cd ~/projects/notas && v info/other/finanzas/airtmdad.md'
@@ -52,6 +54,7 @@ alias geonode='sudo n 12 && nodemon index.js'
 ### Geoselfie commands
 alias start='cd /home/geoselfie/Interface && bash services/start.sh'
 alias stop='cd /home/geoselfie/Interface && bash services/stop.sh'
+alias stopall='cd ~ && bash stop-all-services.sh'
 alias status='cd /home/geoselfie/Interface && bash services/status.sh'
 alias restart='cd /home/geoselfie/Interface && bash services/restart.sh'
 alias menu='cd ~/projects/geoselfie/geoselfie-github/AWS && bash menu.sh'
@@ -166,3 +169,4 @@ export ANDROID_SDK_ROOT=/usr/lib/android-sdk
 export ANDROID_SDK_ROOT=/home/davidvalorwork/Android/Sdk
 export ANDROID_HOME=/home/davidvalorwork/Android/Sdk
 export ZSH_DISABLE_COMPFIX=true
+v
