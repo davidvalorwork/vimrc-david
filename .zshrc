@@ -19,7 +19,7 @@ alias vplugc='vi ~/.vim/plugin-config.vim'
 alias vmap='vi ~/.vim/maps.vim'
 alias h='htop'
 alias vidav='cd ~/projects/vimrc-david'
-alias savezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
+alias updatezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
 ## Git
 alias gcom='git add . && echo "Type commit message" && read commitMsj && git commit -m "$commitMsj" && git pull && git push'
 alias gpl='git pull'
@@ -82,51 +82,23 @@ alias sidequest='cd "/home/davidvalorwork/Downloads/Carpetas David/Entretenimien
 
 
 ### OTHER CONFIGS NOT IMPORTANT
-
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
+ZSH_THEME="robbyrussell"
 plugins=(
   git
-  zsh-syntax-highlightingh
   zsh-autosuggestions
 )
-source /home/davidvalorwork/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 alias v=openNvim
 # NVM configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-
 # Android studio adb
 export PATH=$PATH:~/Library/Android/sdk/platform-tools/
-
 if [ -f ~/.myenvs ]; then
     source ~/.myenvs
 fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 function openNvim {
   if [ $# -eq 0 ]; then
     nvim ./
@@ -160,6 +132,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 #export PATH=”/root/.local/bin:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/Library/Android/sdk/platform-tools/:/root/.fzf/bin:/root/.rvm/bin:/root/Library/Android/sdk/emulator:/root/Library/Android/sdk/tools:/root/Library/Android/sdk/tools/bin:/root/Library/Android/sdk/platform-tools:/root/Library/Android/sdk/platform-tools/:/root/.rvm/bin:/root/Library/Android/sdk/emulator:/root/Library/Android/sdk/tools:/root/Library/Android/sdk/tools/bin:/root/Library/Android/sdk/platform-tools:/opt/mssql-tools/bin”‘
 #
 export PATH="$PATH:/opt/mssql-tools/bin"
+alias python3='python'
 #source $HOME/.cargo/env
 #export PATH=~/.local/bin:$PATH
 #export ANDROID_HOME=$HOME/Android/Sdk
@@ -168,3 +141,4 @@ export PATH="$PATH:/opt/mssql-tools/bin"
 #export ANDROID_SDK_ROOT=/home/davidvalorwork/Android/Sdk
 #export ANDROID_HOME=/home/davidvalorwork/Android/Sdk
 #export ZSH_DISABLE_COMPFIX=true
+source /home/davidvalorwork/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
