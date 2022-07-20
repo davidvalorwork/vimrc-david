@@ -8,8 +8,9 @@
 # Personal
 ## Global use
 alias e=exit
+alias b=bash
+alias v=nvim
 alias cls=clear
-alias n="bash ../scripts/deploy-ubuntu-apache.sh"
 alias z='vi ~/.zshrc && zsh'
 alias h='htop'
 alias vconf='vi ~/.vimrc'
@@ -146,27 +147,24 @@ export GIT_EDITOR=nvim
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
-export PATH=~/.local/bin:$PATH
+#export ANDROID_HOME=$HOME/Library/Android/sdk
+#export PATH=$PATH:$ANDROID_HOME/emulator
+#export PATH=$PATH:$ANDROID_HOME/tools
+#export PATH=$PATH:$ANDROID_HOME/tools/bin
+#export PATH=$PATH:$ANDROID_HOME/platform-tools
+#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+#export PATH=~/.local/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-export PATH=”/root/.local/bin:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/Library/Android/sdk/platform-tools/:/root/.fzf/bin:/root/.rvm/bin:/root/Library/Android/sdk/emulator:/root/Library/Android/sdk/tools:/root/Library/Android/sdk/tools/bin:/root/Library/Android/sdk/platform-tools:/root/Library/Android/sdk/platform-tools/:/root/.rvm/bin:/root/Library/Android/sdk/emulator:/root/Library/Android/sdk/tools:/root/Library/Android/sdk/tools/bin:/root/Library/Android/sdk/platform-tools:/opt/mssql-tools/bin”‘
-
-alias b=bash
-alias v=nvim
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#export PATH=”/root/.local/bin:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/Library/Android/sdk/platform-tools/:/root/.fzf/bin:/root/.rvm/bin:/root/Library/Android/sdk/emulator:/root/Library/Android/sdk/tools:/root/Library/Android/sdk/tools/bin:/root/Library/Android/sdk/platform-tools:/root/Library/Android/sdk/platform-tools/:/root/.rvm/bin:/root/Library/Android/sdk/emulator:/root/Library/Android/sdk/tools:/root/Library/Android/sdk/tools/bin:/root/Library/Android/sdk/platform-tools:/opt/mssql-tools/bin”‘
+#
 export PATH="$PATH:/opt/mssql-tools/bin"
-source $HOME/.cargo/env
-export PATH=~/.local/bin:$PATH
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/toolst
-export ANDROID_SDK_ROOT=/usr/lib/android-sdk
-export ANDROID_SDK_ROOT=/home/davidvalorwork/Android/Sdk
-export ANDROID_HOME=/home/davidvalorwork/Android/Sdk
-export ZSH_DISABLE_COMPFIX=true
-v
+#source $HOME/.cargo/env
+#export PATH=~/.local/bin:$PATH
+#export ANDROID_HOME=$HOME/Android/Sdk
+#export PATH=$PATH:$ANDROID_HOME/toolst
+#export ANDROID_SDK_ROOT=/usr/lib/android-sdk
+#export ANDROID_SDK_ROOT=/home/davidvalorwork/Android/Sdk
+#export ANDROID_HOME=/home/davidvalorwork/Android/Sdk
+#export ZSH_DISABLE_COMPFIX=true

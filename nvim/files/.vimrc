@@ -20,7 +20,7 @@ colorscheme fahrenheit
 "colorscheme default
 let g:airline_powerline_fonts = 1
 let g:gruvbox_contrast_dark = "hard"
-"hi Normal guibg=NONE ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
 set laststatus=2
