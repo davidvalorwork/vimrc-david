@@ -6,7 +6,7 @@ set clipboard=unnamed
 syntax on
 set showcmd
 set ruler
-"set cursorline
+set cursorline
 set encoding=utf-8
 set showmatch
 set termguicolors
