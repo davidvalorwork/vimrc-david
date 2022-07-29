@@ -7,6 +7,7 @@
 # Nautilus
 # Personal
 ## Global use
+alias copyclip='cat ~/x | clip.exe'
 alias e=exit
 alias b=bash
 alias v=nvim
@@ -40,11 +41,11 @@ alias notgr='cd ~/projects/notas && v info/other/finanzas/programacion/gruposip_
 alias notorg='cd ~/projects/notas && v info/organization_system.md'
 alias kat2='v ~/projects/notas/info/other/social/sargin/kat2.md'
 alias notday='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && v $year/$month/$day.md'
-alias notcarro='v ~/projects/notas/info/carro.md'
+alias notcar='v ~/projects/notas/info/carro.md'
 alias notconse='v ~/projects/notas/info/other/finanzas/programacion/consejos.md'
 alias notvim='v ~/projects/notas/info/other/finanzas/programacion/vim.md'
 ## Enter in repos Geoselfie
-alias geou='cd /home/geoselfie/Interface'
+alias geou='cd ~/projects/geoselfie/geoselfie-github/Interface'
 alias geob='cd ~/projects/geoselfie/geoselfie-github/Backend'
 alias geos='cd ~/projects/geoselfie/geoselfie-github/Server'
 alias geoc='cd ~/projects/geoselfie/geoselfie-github/Console'
