@@ -56,3 +56,4 @@ sudo nvim ~/.vimrc +'PlugInstall' +qa
 sudo nvim ~/.vimrc +'CocInstall coc-snippets' +qa
 sleep 2
 mv ~/projects/vimrc-david/.zshrc ~
+mv ~/notas ~/projects/notas
