@@ -27,7 +27,7 @@ alias gpl='git pull'
 alias ggu='git gui'
 ## Notas commands
 alias createnotas='cd ~ && git clone git@github.com:davidvalorwork/notas.git'
-alias c='cd ~/notas && ./commit.sh'
+alias c='cd ~/projects/notas && ./commit.sh'
 alias not='cd ~/projects/notas '
 alias cr='echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
 alias notgeo='cd ~/projects/notas && v info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
