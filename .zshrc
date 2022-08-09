@@ -8,6 +8,7 @@
 # Personal
 ## Global use
 alias copyclip='cat ~/x | clip.exe'
+alias tscx='tsc x.ts && node x.js && rm x.js'
 alias e=exit
 alias b=bash
 alias v=nvim
@@ -61,9 +62,9 @@ alias status='cd /home/geoselfie/Interface && bash services/status.sh'
 alias restart='cd /home/geoselfie/Interface && bash services/restart.sh'
 alias menu='cd ~/projects/geoselfie/geoselfie-github/AWS && bash menu.sh'
 ## Enter in repos Gruposip
-alias graf='cd ~/projects/gruposip/_analytiko/front'
+alias graf='cd ~/projects/gruposip/analytiko_app/front'
 alias nglimit='node --max_old_space_size=1100 ./node_modules/@angular/cli/bin/ng serve'
-alias grab='cd ~/projects/gruposip/_analytiko/back'
+alias grab='cd ~/projects/gruposip/analytiko_app/back'
 alias grabn='cd ~/projects/gruposip/analytiko-backend'
 alias grdeldb='cd ../scripts && bash drop-databases.sh V1su4l1z4c10nm3m0r1z && cd ../back'
 alias grnode='nodemon app.js --prod'
@@ -78,6 +79,8 @@ alias rendervids='bash ~/projects/personal/encode-upload-youtube-videos/handbrak
 alias downmanyvids='mkdir -p /home/davidvalorwork/Downloads/phone/vids && rm -rf /home/davidvalorwork/Downloads/phone/vids && mkdir -p ~/projects/personal/downloadVids/vids && cd ~/projects/personal/downloadVids && python3 ~/projects/personal/downloadVids/download.py && zip -r /home/davidvalorwork/Downloads/phone/vids ./vids'
 alias sendphone='cd /home/davidvalorwork/Downloads/ && bash sendphone.sh'
 alias sidequest='cd "/home/davidvalorwork/Downloads/Carpetas David/Entretenimiento y otros/SideQuest-0.10.27" && ./sidequest'
+## Altyro
+alias altyro='cd ~/projects/altyro/altyro-new'
 
 
 
