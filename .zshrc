@@ -1,19 +1,22 @@
-# Keys for easy work
-# Global
-# Git
-# Notas
-# Geoselfie
-# Gruposip
-# Nautilus
-# Personal
+# 1. Keys for easy work
+# 2. Global
+# 3. Git
+# 4. Notas
+# 5. Geoselfie
+# 6. Gruposip
+# 7. Nautilus
+# 8. Personal
+# 9. Altyro
+# 10. VSCODE
 ## Global use
-alias copyclip='cat ~/x | clip.exe'
+alias cc='cat ~/x | clip.exe'
 alias tscx='tsc x.ts && node x.js && rm x.js'
 alias e=exit
 alias b=bash
 alias v=nvim
 alias cls=clear
 alias z='nvim ~/.zshrc && zsh'
+alias cz='code ~/.zshrc'
 alias h='htop'
 alias vconf='vi ~/.vimrc'
 alias vplug='vi ~/.vim/plugins.vim'
@@ -31,12 +34,12 @@ alias createnotas='cd ~ && git clone git@github.com:davidvalorwork/notas.git'
 alias c='cd ~/projects/notas && ./commit.sh'
 alias not='cd ~/projects/notas '
 alias cr='echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
-alias notgeo='cd ~/projects/notas && nvim info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
+alias nge='cd ~/projects/notas && nvim info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
 alias notgeoc='cd ~/projects/notas && nvim info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
 alias notga='cd ~/projects/notas && nvim info/gastos-mensuales.md'
 alias notgac='cd ~/projects/notas && nvim info/gastos-mensuales.md'
 alias notre='cd ~/projects/notas && nvim info/recordatorio.md'
-alias notim='cd ~/projects/notas && nvim info/other/finanzas/importInf.md'
+alias notim='cd ~/projects/notas && code info/other/finanzas/importInf.md'
 alias notdad='cd ~/projects/notas && nvim info/other/finanzas/airtmdad.md'
 alias notgr='cd ~/projects/notas && nvim info/other/finanzas/programacion/gruposip_casos.md'
 alias notorg='cd ~/projects/notas && nvim info/organization_system.md'
@@ -45,19 +48,26 @@ alias notday='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && 
 alias notcar='nvim ~/projects/notas/info/carro.md'
 alias notconse='nvim ~/projects/notas/info/other/finanzas/programacion/consejos.md'
 alias notvim='nvim ~/projects/notas/info/other/finanzas/programacion/vim.md'
+alias nbut='nvim ~/projects/notas/info/butterfly.md'
 ## Enter in repos Geoselfie
-alias geou='cd ~/projects/geoselfie/geoselfie-github/Interface'
+alias geoa='cd ~/projects/geoselfie/geoselfie-github/AWS'
 alias geob='cd ~/projects/geoselfie/geoselfie-github/Backend'
 alias geos='cd ~/projects/geoselfie/geoselfie-github/Server'
 alias geoc='cd ~/projects/geoselfie/geoselfie-github/Console'
-alias geous='cd ~/projects/geoselfie/geoselfie-github/Users'
-alias geoa='cd ~/projects/geoselfie/geoselfie-github/AWS'
+alias gus='cd ~/projects/geoselfie/geoselfie-github/Users'
+alias gu='cd /home/geoselfie/Interface'
+alias gupr='cd /home/geoselfie/Interface && sudo python3 remote.py'
 alias geot='cd ~/projects/geoselfie/geoselfie-github/Testend2end'
 alias geol='cd ~/projects/geoselfie/geoselfie-github/Promotions-Lambda'
 alias geonode='sudo n 12 && nodemon index.js'
 ### Geoselfie commands
-alias start='cd /home/geoselfie/Interface && bash services/start.sh'
-alias stop='cd /home/geoselfie/Interface && bash services/stop.sh'
+alias startu='cd /home/geoselfie/Interface && bash services/start-pm2.sh'
+alias stopu='cd /home/geoselfie/Interface && bash services/stop-pm2.sh'
+alias restartu='cd /home/geoselfie/Interface && bash services/pm2-restart.sh'
+alias ulogremote='cd /home/geoselfie/Interface && code logs/remote.log'
+alias ulogweb='cd /home/geoselfie/Interface && code logs/web_interface.log'
+alias ulogconsole='cd /home/geoselfie/Interface && code logs/console.log'
+alias uloguploadfiles='cd /home/geoselfie/Interface && code logs/upload_files.log'
 alias stopall='cd ~ && bash stop-all-services.sh'
 alias status='cd /home/geoselfie/Interface && bash services/status.sh'
 alias restart='cd /home/geoselfie/Interface && bash services/restart.sh'
@@ -65,8 +75,7 @@ alias menu='cd ~/projects/geoselfie/geoselfie-github/AWS && bash menu.sh'
 ## Enter in repos Gruposip
 alias graf='cd ~/projects/gruposip/analytiko_app/front'
 alias nglimit='node --max_old_space_size=1100 ./node_modules/@angular/cli/bin/ng serve'
-alias grab='cd ~/projects/gruposip/analytiko_app/back'
-alias grabn='cd ~/projects/gruposip/analytiko-backend'
+alias grab='cd ~/projects/gruposip/analytiko-backend'
 alias grdeldb='cd ../scripts && bash drop-databases.sh V1su4l1z4c10nm3m0r1z && cd ../back'
 alias grnode='nodemon app.js --prod'
 alias grmss='systemctl start mssql-server'
@@ -78,10 +87,22 @@ alias dirvid='nautilus /home/davidvalorwork/Videos'
 ## Personal
 alias rendervids='bash ~/projects/personal/encode-upload-youtube-videos/handbrake.sh'
 alias downmanyvids='mkdir -p /home/davidvalorwork/Downloads/phone/vids && rm -rf /home/davidvalorwork/Downloads/phone/vids && mkdir -p ~/projects/personal/downloadVids/vids && cd ~/projects/personal/downloadVids && python3 ~/projects/personal/downloadVids/download.py && zip -r /home/davidvalorwork/Downloads/phone/vids ./vids'
+alias personal='~/projects/personal/personal-scripts/downloadVids'
 alias sendphone='cd /home/davidvalorwork/Downloads/ && bash sendphone.sh'
 alias sidequest='cd "/home/davidvalorwork/Downloads/Carpetas David/Entretenimiento y otros/SideQuest-0.10.27" && ./sidequest'
 ## Altyro
 alias altyro='cd ~/projects/altyro/altyro-new'
+## VSCODE
+alias cno='not && code .'
+alias cgeoa='cd ~/projects/geoselfie/geoselfie-github/AWS && code .'
+alias cgeob='cd ~/projects/geoselfie/geoselfie-github/Backend && code .'
+alias cgeos='cd ~/projects/geoselfie/geoselfie-github/Server && code .'
+alias cgeoc='cd ~/projects/geoselfie/geoselfie-github/Console && code .'
+alias cgeous='cd ~/projects/geoselfie/geoselfie-github/Users && code .'
+alias cgeou='cd /home/geoselfie/Interface && code .'
+alias cgeot='cd ~/projects/geoselfie/geoselfie-github/Testend2end && code .'
+alias cgeol='cd ~/projects/geoselfie/geoselfie-github/Promotions-Lambda && code .'
+alias cgeonode='sudo n 12 && nodemon index.js && code .'
 
 
 
