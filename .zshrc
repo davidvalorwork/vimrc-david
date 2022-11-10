@@ -1,3 +1,7 @@
+# Variables
+year=$(date '+%Y')
+month=$(date '+%m')
+day=$(date '+%d')
 # 1. Keys for easy work
 # 2. Global
 # 3. Git
@@ -35,7 +39,12 @@ alias createnotas='cd ~ && git clone git@github.com:davidvalorwork/notas.git'
 alias c='cd ~/projects/notas && ./commit.sh'
 alias not='x=$(c) && cd ~/projects/notas '
 alias cr='echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
+alias cr='echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
+alias nre='cd ~/projects/notas && nvim info/recordatorio.md'
+alias nreg='cd ~/projects/notas && tail -4 info/recordatorio.md'
+alias nrec='echo Type your comment to the file && read input && cd ~/projects/notas && echo \\n ${year}-${month}-${day} $input >> info/recordatorio.md && x=$(c)'
 alias nge='cd ~/projects/notas && nvim info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
+alias ngec='echo Type your comment to the file && read input && cd ~/projects/notas && echo \\n ${year}-${month}-${day} $input >> info/other/finanzas/programacion/geoselfie/actividades-por-dia.md && x=$(c)'
 alias notgeoc='cd ~/projects/notas && nvim info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
 alias notga='cd ~/projects/notas && nvim info/gastos-mensuales.md'
 alias notgac='cd ~/projects/notas && nvim info/gastos-mensuales.md'
