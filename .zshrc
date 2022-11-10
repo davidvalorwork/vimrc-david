@@ -25,6 +25,7 @@ alias vmap='vi ~/.vim/maps.vim'
 alias h='htop'
 alias vidav='cd ~/projects/vimrc-david'
 alias updatezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
+alias uz='cd ~/projects/vimrc-david && bash update-zsh.sh'
 ## Git
 alias gcom='git add . && echo "Type commit message" && read commitMsj && git commit -m "$commitMsj" && git pull && git push'
 alias gpl='git pull'
@@ -61,6 +62,7 @@ alias geot='cd ~/projects/geoselfie/geoselfie-github/Testend2end'
 alias geol='cd ~/projects/geoselfie/geoselfie-github/Promotions-Lambda'
 alias geonode='sudo n 12 && nodemon index.js'
 ### Geoselfie commands
+alias confsso='echo https://d-9767053cf1.awsapps.com/start && echo ap-southeast-2 && aws configure sso --profile david.valor-prod && echo https://d-9767053cf1.awsapps.com/start && echo ap-southeast-2'
 alias startu='cd /home/geoselfie/Interface && bash services/start-pm2.sh'
 alias stopu='cd /home/geoselfie/Interface && bash services/stop-pm2.sh'
 alias restartu='cd /home/geoselfie/Interface && bash services/pm2-restart.sh'
@@ -168,3 +170,7 @@ alias python3='python'
 #export ANDROID_HOME=/home/davidvalorwork/Android/Sdk
 #export ZSH_DISABLE_COMPFIX=true
 source /home/davidvalorwork/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
