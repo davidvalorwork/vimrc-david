@@ -1,7 +1,11 @@
 # Variables
-year=$(date '+%Y')
-month=$(date '+%m')
-day=$(date '+%d')
+actualizardiasynotas(){
+  x=$(c)
+  year=$(date '+%Y')
+  month=$(date '+%m')
+  day=$(date '+%d')
+  init=`date +%H:%M`
+}
 # 1. Keys for easy work
 # 2. Global
 # 3. Git
@@ -37,25 +41,26 @@ alias ggu='git gui'
 ## Notas commands
 alias createnotas='cd ~ && git clone git@github.com:davidvalorwork/notas.git'
 alias c='cd ~/projects/notas && ./commit.sh'
-alias not='x=$(c) && cd ~/projects/notas '
-alias cr='echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
-alias cr='echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
-alias nre='cd ~/projects/notas && nvim info/recordatorio.md'
-alias nreg='cd ~/projects/notas && tail -34 info/recordatorio.md'
-alias nrec='echo Type your comment to the file && read input && cd ~/projects/notas && echo \\n ${year}-${month}-${day} $input >> info/recordatorio.md && x=$(c)'
-alias nge='cd ~/projects/notas && nvim info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
-alias ngeg='cd ~/projects/notas && tail -34 info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
-alias ngec='echo Type your comment to the file && read input && cd ~/projects/notas && echo \\n ${year}-${month}-${day} $input >> info/other/finanzas/programacion/geoselfie/actividades-por-dia.md && x=$(c)'
+alias not='actualizardiasynotas && cd ~/projects/notas '
+alias cr='actualizardiasynotas && echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
+alias nre='actualizardiasynotas && cd ~/projects/notas && nvim info/recordatorio.md'
+alias nreg='actualizardiasynotas && cd ~/projects/notas && tail -34 info/recordatorio.md'
+alias nrec='actualizardiasynotas && echo Type your comment to the file && read input && cd ~/projects/notas && echo ${year}-${month}-${day} ${init} - $input >> info/recordatorio.md '
+alias nge='actualizardiasynotas && cd ~/projects/notas && nvim info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
+alias ngeg='actualizardiasynotas && cd ~/projects/notas && tail -34 info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
+alias ngec='actualizardiasynotas && echo Type your comment to the file && read input && cd ~/projects/notas && echo ${year}-${month}-${day} ${init} - $input >> info/other/finanzas/programacion/geoselfie/actividades-por-dia.md '
 alias notgeoc='cd ~/projects/notas && nvim info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
-alias notga='cd ~/projects/notas && nvim info/gastos-mensuales.md'
-alias notgac='cd ~/projects/notas && nvim info/gastos-mensuales.md'
-alias notre='cd ~/projects/notas && nvim info/recordatorio.md'
+alias notga='actualizardiasynotas && cd ~/projects/notas && nvim info/gastos-mensuales.md'
+alias notgac='actualizardiasynotas && cd ~/projects/notas && nvim info/gastos-mensuales.md'
+alias notre='actualizardiasynotas && cd ~/projects/notas && nvim info/recordatorio.md'
 alias notim='cd ~/projects/notas && code info/other/finanzas/importInf.md'
 alias notdad='cd ~/projects/notas && nvim info/other/finanzas/airtmdad.md'
 alias notgr='cd ~/projects/notas && nvim info/other/finanzas/programacion/gruposip_casos.md'
 alias notorg='cd ~/projects/notas && nvim info/organization_system.md'
 alias kat2='nvim ~/projects/notas/info/other/social/sargin/kat2.md'
-alias nd='x=$(c) && year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && nvim $year/$month/$day.md'
+alias nd='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && nvim $year/$month/$day.md'
+alias ndc='read input  && year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && echo ${year}-${month}-${day} ${init} - $input >> $year/$month/$day.md'
+alias ndg='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && tail -34 $year/$month/$day.md'
 alias notcar='nvim ~/projects/notas/info/carro.md'
 alias notconse='nvim ~/projects/notas/info/other/finanzas/programacion/consejos.md'
 alias notvim='nvim ~/projects/notas/info/other/finanzas/programacion/vim.md'
