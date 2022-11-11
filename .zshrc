@@ -1,6 +1,5 @@
 # Variables
 actualizardiasynotas(){
-  x=$(c)
   year=$(date '+%Y')
   month=$(date '+%m')
   day=$(date '+%d')
@@ -53,7 +52,7 @@ alias notgeoc='cd ~/projects/notas && nvim info/other/finanzas/programacion/geos
 alias notga='actualizardiasynotas && cd ~/projects/notas && nvim info/gastos-mensuales.md'
 alias notgac='actualizardiasynotas && cd ~/projects/notas && nvim info/gastos-mensuales.md'
 alias notre='actualizardiasynotas && cd ~/projects/notas && nvim info/recordatorio.md'
-alias notim='cd ~/projects/notas && code info/other/finanzas/importInf.md'
+alias nim='cd ~/projects/notas && nvim info/other/finanzas/importInf.md'
 alias notdad='cd ~/projects/notas && nvim info/other/finanzas/airtmdad.md'
 alias notgr='cd ~/projects/notas && nvim info/other/finanzas/programacion/gruposip_casos.md'
 alias notorg='cd ~/projects/notas && nvim info/organization_system.md'
@@ -66,16 +65,16 @@ alias notconse='nvim ~/projects/notas/info/other/finanzas/programacion/consejos.
 alias notvim='nvim ~/projects/notas/info/other/finanzas/programacion/vim.md'
 alias nbut='nvim ~/projects/notas/info/butterfly.md'
 ## Enter in repos Geoselfie
-alias geoa='cd ~/projects/geoselfie/geoselfie-github/AWS'
-alias geob='cd ~/projects/geoselfie/geoselfie-github/Backend'
-alias geos='cd ~/projects/geoselfie/geoselfie-github/Server'
-alias geoc='cd ~/projects/geoselfie/geoselfie-github/Console'
+alias gea='cd ~/projects/geoselfie/geoselfie-github/AWS'
+alias geb='cd ~/projects/geoselfie/geoselfie-github/Backend'
+alias ges='cd ~/projects/geoselfie/geoselfie-github/Server'
+alias gec='cd ~/projects/geoselfie/geoselfie-github/Console'
 alias gus='cd ~/projects/geoselfie/geoselfie-github/Users'
 alias gu='cd /home/geoselfie/Interface'
 alias gupr='cd /home/geoselfie/Interface && sudo python3 remote.py'
-alias geot='cd ~/projects/geoselfie/geoselfie-github/Testend2end'
-alias geol='cd ~/projects/geoselfie/geoselfie-github/Promotions-Lambda'
-alias geonode='sudo n 12 && nodemon index.js'
+alias get='cd ~/projects/geoselfie/geoselfie-github/Testend2end'
+alias gel='cd ~/projects/geoselfie/geoselfie-github/Promotions-Lambda'
+alias gen='sudo n 12 && nodemon index.js'
 ### Geoselfie commands
 alias confsso='echo https://d-9767053cf1.awsapps.com/start && echo ap-southeast-2 && aws configure sso --profile david.valor-prod && echo https://d-9767053cf1.awsapps.com/start && echo ap-southeast-2'
 alias startu='cd /home/geoselfie/Interface && bash services/start-pm2.sh'
