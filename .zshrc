@@ -90,6 +90,7 @@ alias restart='cd /home/geoselfie/Interface && bash services/restart.sh'
 alias menu='cd ~/projects/geoselfie/geoselfie-github/AWS && bash menu.sh'
 ## Enter in repos Gruposip
 alias graf='cd ~/projects/gruposip/analytiko_app/front'
+alias grap='cd ~/projects/gruposip/app-analytiko'
 alias nglimit='node --max_old_space_size=1100 ./node_modules/@angular/cli/bin/ng serve'
 alias grab='cd ~/projects/gruposip/analytiko-backend'
 alias grdeldb='cd ../scripts && bash drop-databases.sh V1su4l1z4c10nm3m0r1z && cd ../back'
