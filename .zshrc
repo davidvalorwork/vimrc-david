@@ -54,7 +54,8 @@ alias notgac='actualizardiasynotas && cd ~/projects/notas && nvim info/gastos-me
 alias notre='actualizardiasynotas && cd ~/projects/notas && nvim info/recordatorio.md'
 alias nim='cd ~/projects/notas && nvim info/other/finanzas/importInf.md'
 alias notdad='cd ~/projects/notas && nvim info/other/finanzas/airtmdad.md'
-alias notgr='cd ~/projects/notas && nvim info/other/finanzas/programacion/gruposip_casos.md'
+alias ngr='cd ~/projects/notas && nvim info/other/finanzas/programacion/gruposip_casos.md'
+alias ngrc='actualizardiasynotas && echo Type your comment to the file && read input && cd ~/projects/notas && echo ${year}-${month}-${day} ${init} - $input >> info/other/finanzas/programacion/gruposip_casos.md'
 alias notorg='cd ~/projects/notas && nvim info/organization_system.md'
 alias kat2='nvim ~/projects/notas/info/other/social/sargin/kat2.md'
 alias nd='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && nvim $year/$month/$day.md'
@@ -97,6 +98,7 @@ alias grdeldb='cd ../scripts && bash drop-databases.sh V1su4l1z4c10nm3m0r1z && c
 alias grnode='nodemon app.js --prod'
 alias grmss='systemctl start mssql-server'
 alias grmsss='systemctl stop mssql-server'
+alias grappsync='grap && ionic build  && npx cap sync && rm -rf /mnt/c/Users/david/app-analytiko && cp -r ../app-analytiko /mnt/c/Users/david/app-analytiko'
 ## Nautilus
 alias dirimg='nautilus /home/davidvalorwork/Pictures'
 alias dirdown='nautilus /home/davidvalorwork/Downloads'
