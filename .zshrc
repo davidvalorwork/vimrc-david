@@ -9,10 +9,9 @@ syncappgrapp(){
   # FOR WINDOWS
   cd ~/projects/gruposip/app-analytiko
   git pull
-  start "Command Prompt.lnk"
-  echo "Execute ionic build in command prompt"
+  start "Command Prompt.lnk" ionic build
+  echo "Press enter when finish"
   read wai
-  ionic build
   npx cap add android
   npx cap sync android
   cd android
