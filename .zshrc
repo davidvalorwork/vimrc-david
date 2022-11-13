@@ -5,6 +5,26 @@ actualizardiasynotas(){
   day=$(date '+%d')
   init=`date +%H:%M`
 }
+syncappgrapp(){
+  # FOR WINDOWS
+  cd ~/projects/gruposip/app-analytiko
+  git pull
+  start "Command Prompt.lnk"
+  echo "Execute ionic build in command prompt"
+  read wai
+  ionic build
+  npx cap add android
+  npx cap sync android
+  cd android
+  ./gradlew clean
+  ./gradlew build
+  cd ..
+  rm -rf ../analytiko-app.apk
+  echo "Upload apk to google drive"
+  mv android/app/build/outputs/apk/debug/app-debug.apk ../analytiko-app.apk
+  start ..
+  start chrome https://drive.google.com/drive/u/0/folders/140UkiLAne-ryB0Tm0dG4CjmU_zdAUgAu
+}
 # 1. Keys for easy work
 # 2. Global
 # 3. Git
@@ -98,13 +118,13 @@ alias grdeldb='cd ../scripts && bash drop-databases.sh V1su4l1z4c10nm3m0r1z && c
 alias grnode='nodemon app.js --prod'
 alias grmss='systemctl start mssql-server'
 alias grmsss='systemctl stop mssql-server'
-alias grappsync='grap && ionic build  && npx cap sync && rm -rf /mnt/c/Users/david/app-analytiko && cp -r ../app-analytiko /mnt/c/Users/david/app-analytiko'
+alias graps=syncappgrapp
 ## Nautilus
 alias dirimg='nautilus /home/davidvalorwork/Pictures'
 alias dirdown='nautilus /home/davidvalorwork/Downloads'
 alias dirvid='nautilus /home/davidvalorwork/Videos'
 ## Personal
-alias rendervids='bash ~/projects/personal/encode-upload-youtube-videos/handbrake.sh'
+alias rendervids='bash ~/projects/personal/personal-scripts/encode-upload-youtube-videos/handbrake.sh && start chrome "https://studio.youtube.com/channel/UCuOSwst3g-6msZuPPf9npnQ/videos/upload?d=ud&filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D" && cd "C:\Users\david\Videos\obs" && start ..'
 alias downmanyvids='mkdir -p /home/davidvalorwork/Downloads/phone/vids && rm -rf /home/davidvalorwork/Downloads/phone/vids && mkdir -p ~/projects/personal/downloadVids/vids && cd ~/projects/personal/downloadVids && python3 ~/projects/personal/downloadVids/download.py && zip -r /home/davidvalorwork/Downloads/phone/vids ./vids'
 alias personal='~/projects/personal/personal-scripts/downloadVids'
 alias sendphone='cd /home/davidvalorwork/Downloads/ && bash sendphone.sh'
