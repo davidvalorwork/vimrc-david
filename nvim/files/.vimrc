@@ -16,11 +16,9 @@ so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
 set bg=dark
-colorscheme fahrenheit
-"colorscheme default
+colorscheme badwolf
 let g:airline_powerline_fonts = 1
 let g:gruvbox_contrast_dark = "hard"
-hi Normal guibg=NONE ctermbg=NONE
 let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
 set laststatus=2
@@ -33,4 +31,3 @@ set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
-

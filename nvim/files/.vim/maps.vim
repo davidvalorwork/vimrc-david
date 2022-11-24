@@ -1,5 +1,9 @@
 let mapleader=" "
 
+" For vim shortcuts
+nnoremap <Leader>vim :edit ~/.vim/maps.vim<CR>
+nnoremap <Leader>cop :edit ~/x<CR>
+
 " For snippets
 nnoremap <Leader>' :CocCommand snippets.editSnippets<CR>
 
