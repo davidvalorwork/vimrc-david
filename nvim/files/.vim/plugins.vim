@@ -53,5 +53,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 
 Plug 'tpope/vim-repeat'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 call plug#end()
