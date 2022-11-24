@@ -52,7 +52,7 @@ alias vplug='vi ~/.vim/plugins.vim'
 alias vplugc='vi ~/.vim/plugin-config.vim'
 alias vmap='vi ~/.vim/maps.vim'
 alias h='htop'
-alias vidav='cd ~/projects/vimrc-david'
+alias vimrcdav='cd ~/projects/vimrc-david'
 alias updatezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
 alias uz='cd ~/projects/vimrc-david && bash update-zsh.sh'
 ## Git

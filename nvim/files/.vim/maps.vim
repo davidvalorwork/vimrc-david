@@ -1,7 +1,9 @@
 let mapleader=" "
 
 " For vim shortcuts
-nnoremap <Leader>vim :edit ~/.vim/maps.vim<CR>
+nnoremap <Leader>vim :edit ~/.vimrc<CR>
+nnoremap <Leader>vimm :edit ~/.vim/maps.vim<CR>
+nnoremap <Leader>vimp :edit ~/.vim/plugins.vim<CR>
 nnoremap <Leader>cop :edit ~/x<CR>
 
 " For snippets
