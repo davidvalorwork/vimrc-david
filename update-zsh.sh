@@ -13,6 +13,8 @@ then
 	cp ~/.zshrc ./
 	cp ~/.vimrc ./nvim/files/
  	cp ~/.vim/maps.vim ./nvim/files/.vim
+ 	cp ~/.vim/plugins.vim ./nvim/files/.vim
+ 	cp ./nvim/files/.vim/plugin-config.vim ~/.vim
 	git add .
 	git commit -m "Adding new zsh"
 	git pull
@@ -29,4 +31,6 @@ then
 	cp ./.zshrc ~
 	cp ./nvim/files/.vimrc ~
  	cp ./nvim/files/.vim/maps.vim ~/.vim
+ 	cp ./nvim/files/.vim/plugins.vim ~/.vim
+ 	cp ./nvim/files/.vim/plugin-config.vim ~/.vim
 fi
