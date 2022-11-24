@@ -28,5 +28,5 @@ then
  	rm -rf ~/.vim/maps.vim
 	cp ./.zshrc ~
 	cp ./nvim/files/.vimrc ~
- 	cp ./nvim/files//.vim/maps.vim ~
+ 	cp ./nvim/files/.vim/maps.vim ~
 fi
