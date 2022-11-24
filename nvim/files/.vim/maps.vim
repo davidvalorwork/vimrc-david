@@ -7,6 +7,9 @@ nnoremap <Leader>vimp :edit ~/.vim/plugins.vim<CR>
 nnoremap <Leader>cop :edit ~/x<CR>
 nnoremap <Leader>e :edit .<CR>
 
+" For projects
+nnoremap <Leader>pnot :cd ~/projects/notas<CR>
+
 " For snippets
 nnoremap <Leader>' :CocCommand snippets.editSnippets<CR>
 
