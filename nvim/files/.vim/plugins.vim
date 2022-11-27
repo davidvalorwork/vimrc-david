@@ -51,8 +51,8 @@ Plug 'scrooloose/nerdcommenter'
 
 " git
 Plug 'tpope/vim-fugitive'
-
 Plug 'tpope/vim-repeat'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'github/copilot.vim'
 
 call plug#end()

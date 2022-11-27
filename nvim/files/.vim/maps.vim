@@ -9,6 +9,7 @@ nnoremap <Leader>e :edit .<CR>
 
 " For projects
 nnoremap <Leader>pnot :cd ~/projects/notas<CR>
+nnoremap <Leader>pgea :cd ~/projects/geoselfie/geoselfie-github/AWS<CR>
 
 " For snippets
 nnoremap <Leader>' :CocCommand snippets.editSnippets<CR>
