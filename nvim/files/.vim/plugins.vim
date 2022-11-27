@@ -54,5 +54,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'preservim/tagbar'
+Plug 'glepnir/dashboard-nvim'
 
 call plug#end()
