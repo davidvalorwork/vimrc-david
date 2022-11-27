@@ -28,6 +28,7 @@ cp -r files/.vim ~/.vim
 sudo apt remove zsh -y
 cd ~
 sudo apt-get install -y colorize
+sudo apt install exuberant-ctags -y
 sudo apt install nodejs -y
 sudo apt install curl -y
 sudo apt install npm -y

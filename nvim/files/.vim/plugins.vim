@@ -53,6 +53,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'github/copilot.vim'
+Plug 'preservim/tagbar'
 
 call plug#end()
