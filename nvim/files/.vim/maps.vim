@@ -1,15 +1,22 @@
 let mapleader=" "
 
+" Coc Prettier
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
+
 " For vim shortcuts
 nnoremap <Leader>vim :edit ~/.vimrc<CR>
 nnoremap <Leader>vimm :edit ~/.vim/maps.vim<CR>
 nnoremap <Leader>vimp :edit ~/.vim/plugins.vim<CR>
-nnoremap <Leader>cop :edit ~/x<CR>
+nnoremap <Leader>co :edit ~/x<CR>
 nnoremap <Leader>e :edit .<CR>
 
 " For projects
-nnoremap <Leader>pnot :cd ~/projects/notas<CR>
-nnoremap <Leader>pgea :cd ~/projects/geoselfie/geoselfie-github/AWS<CR>
+nnoremap <Leader>pn :cd ~/projects/notas<CR>
+nnoremap <leader>pga :cd ~/projects/geoselfie/geoselfie-github/AWS<cr>
+nnoremap <leader>pgp :cd ~/projects/geoselfie/geoselfie-github/AWS/Promotions-Lambda<cr>
+nnoremap <Leader>pgu :cd /home/geoselfie/Interface<CR>
+nnoremap <Leader>pgul :cd /home/geoselfie/Interface/logs<CR>
 
 " For snippets
 nnoremap <Leader>' :CocCommand snippets.editSnippets<CR>
@@ -31,7 +38,7 @@ nnoremap <Leader>< 10<C-w><
 
 " quick semi
 nnoremap <Leader>; $a;<Esc>
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>w :w <bar> Prettier <bar> w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
 
@@ -69,7 +76,7 @@ map <Leader>h :tabprevious<cr>
 map <Leader>l :tabnext<cr>
 
 " buffers
-map <Leader>ob :Buffers<cr>
+map <Leader>o :Buffers<cr>
 
 " keeping it centered
 nnoremap n nzzzv
@@ -89,8 +96,6 @@ nmap <Leader>s <Plug>(easymotion-s2)
 
 " git
 nnoremap <Leader>G :G<cr>
-nnoremap <Leader>gp :Gpush<cr>
-nnoremap <Leader>gl :Gpull<cr>
 
 " run current file
 nnoremap <Leader>x :!node %<cr>
@@ -132,7 +137,7 @@ function! OpenTerminal()
     " set maps inside terminal buffer
     execute "tnoremap <buffer> <C-h> <C-\\><C-n><C-w><C-h>"
     execute "tnoremap <buffer> <C-t> <C-\\><C-n>:q<CR>"
-    execute "tnoremap <buffer> <C-\\><C-\\> <C-\\><C-n>"
+    execute "tnoremap <buffer> <C-\\> <C-\\><C-n>"
 
     startinsert!
   endif

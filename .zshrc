@@ -57,6 +57,7 @@ alias updatezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
 alias uz='cd ~/projects/vimrc-david && bash update-zsh.sh'
 ## Git
 alias gcom='git add . && echo "Type commit message" && read commitMsj && git commit -m "$commitMsj" && git pull && git push'
+alias gps='git push'
 alias gpl='git pull'
 alias ggu='git gui'
 ## Notas commands
