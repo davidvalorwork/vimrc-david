@@ -38,7 +38,7 @@ nnoremap <Leader>< 10<C-w><
 
 " quick semi
 nnoremap <Leader>; $a;<Esc>
-nnoremap <Leader>w :w <bar> Prettier <bar> w<CR>
+nnoremap <Leader>w :w <bar> Prettier<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
 
