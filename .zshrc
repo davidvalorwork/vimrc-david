@@ -4,7 +4,11 @@ actualizardiasynotas(){
   month=$(date '+%m')
   day=$(date '+%d')
   init=`date +%H:%M`
-  ./commit.sh &
+  output=/dev/stdout
+  exec 6>&1 # saves stdout
+  exec > /dev/null  # redirect stdout to /dev/null
+  exec 1>&6 6>&- # restore stdout
+  ~/projects/notas/commit.sh & 
 }
 syncappgrapp(){
   # FOR WINDOWS
@@ -36,6 +40,7 @@ syncappgrapp(){
 # 9. Altyro
 # 10. VSCODE
 ## Global use
+alias t0='tmux -u attach-session -t 0'
 alias cc='cat ~/x | clip.exe'
 alias tscx='tsc x.ts && node x.js && rm x.js'
 alias e=exit
@@ -56,7 +61,6 @@ alias h='htop'
 alias vimrcdav='cd ~/projects/vimrc-david'
 alias updatezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
 alias uz='cd ~/projects/vimrc-david && bash update-zsh.sh'
-alias cphone='ssh u0_a235@192.168.0.5 -p8022'
 ## Git
 alias gcom='git add . && echo "Type commit message" && read commitMsj && git commit -m "$commitMsj" && git pull && git push'
 alias gps='git push'
@@ -64,7 +68,7 @@ alias gpl='git pull'
 alias ggu='git gui'
 ## Notas commands
 alias createnotas='cd ~ && git clone git@github.com:davidvalorwork/notas.git'
-alias c='cd ~/projects/notas && ./commit.sh'
+alias c='~/projects/notas/commit.sh &'
 alias not='actualizardiasynotas && cd ~/projects/notas '
 alias cr='actualizardiasynotas && echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
 alias nr='actualizardiasynotas && cd ~/projects/notas && v info/recordatorio.md'
@@ -92,7 +96,7 @@ alias notvim='v ~/projects/notas/info/other/finanzas/programacion/vim.md'
 alias nbut='v ~/projects/notas/info/butterfly.md'
 ## Enter in repos Geoselfie
 alias gea='cd ~/projects/geoselfie/geoselfie-github/AWS'
-alias gel='cd ~/projects/geoselfie/geoselfie-github/logs'
+alias gelo='cd ~/projects/geoselfie/geoselfie-github/logs'
 alias geb='cd ~/projects/geoselfie/geoselfie-github/Backend'
 alias ges='cd ~/projects/geoselfie/geoselfie-github/Server'
 alias gec='cd ~/projects/geoselfie/geoselfie-github/Console'
