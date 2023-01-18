@@ -91,6 +91,7 @@ alias notvim='v ~/projects/notas/info/other/finanzas/programacion/vim.md'
 alias nbut='v ~/projects/notas/info/butterfly.md'
 ## Enter in repos Geoselfie
 alias gea='cd ~/projects/geoselfie/geoselfie-github/AWS'
+alias gel='cd ~/projects/geoselfie/geoselfie-github/logs'
 alias geb='cd ~/projects/geoselfie/geoselfie-github/Backend'
 alias ges='cd ~/projects/geoselfie/geoselfie-github/Server'
 alias gec='cd ~/projects/geoselfie/geoselfie-github/Console'
@@ -214,10 +215,12 @@ alias python3='python'
 #export ANDROID_SDK_ROOT=/home/davidvalorwork/Android/Sdk
 #export ANDROID_HOME=/home/davidvalorwork/Android/Sdk
 #export ZSH_DISABLE_COMPFIX=true
-source /home/davidvalorwork/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /home/davidvalorwork/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/davidvalorwork/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+#source <(ng completion script)
 clear
 echo "Bienvenido David Valor"
+echo "Using zsh phone"
