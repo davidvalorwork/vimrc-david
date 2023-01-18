@@ -8,6 +8,7 @@ actualizardiasynotas(){
   exec 6>&1 # saves stdout
   exec > /dev/null  # redirect stdout to /dev/null
   exec 1>&6 6>&- # restore stdout
+  cd ~/projects/notas
   ~/projects/notas/commit.sh & 
 }
 syncappgrapp(){
@@ -68,7 +69,7 @@ alias gpl='git pull'
 alias ggu='git gui'
 ## Notas commands
 alias createnotas='cd ~ && git clone git@github.com:davidvalorwork/notas.git'
-alias c='~/projects/notas/commit.sh &'
+alias c='cd ~/projects/notas && ~/projects/notas/commit.sh &'
 alias not='actualizardiasynotas && cd ~/projects/notas '
 alias cr='actualizardiasynotas && echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
 alias nr='actualizardiasynotas && cd ~/projects/notas && v info/recordatorio.md'
@@ -229,3 +230,5 @@ source /home/davidvalorwork/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zs
 clear
 echo "Bienvenido David Valor"
 echo "Using zsh phone"
+echo "Recuerda anotar planificar todo lo que haces"
+echo "Estudia algoritmos con un algoritmo desde aqui"
