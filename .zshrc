@@ -56,6 +56,7 @@ alias h='htop'
 alias vimrcdav='cd ~/projects/vimrc-david'
 alias updatezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
 alias uz='cd ~/projects/vimrc-david && bash update-zsh.sh'
+alias cphone='ssh u0_a235@192.168.0.5 -p8022'
 ## Git
 alias gcom='git add . && echo "Type commit message" && read commitMsj && git commit -m "$commitMsj" && git pull && git push'
 alias gps='git push'
