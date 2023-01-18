@@ -230,5 +230,5 @@ source /home/davidvalorwork/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zs
 clear
 echo "Bienvenido David Valor"
 echo "Using zsh phone"
-echo "Recuerda anotar planificar todo lo que haces"
+echo "Recuerda anotar y programar todo lo que haces"
 echo "Estudia algoritmos con un algoritmo desde aqui"
