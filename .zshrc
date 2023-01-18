@@ -4,6 +4,7 @@ actualizardiasynotas(){
   month=$(date '+%m')
   day=$(date '+%d')
   init=`date +%H:%M`
+  ./commit.sh &
 }
 syncappgrapp(){
   # FOR WINDOWS
@@ -65,7 +66,7 @@ alias createnotas='cd ~ && git clone git@github.com:davidvalorwork/notas.git'
 alias c='cd ~/projects/notas && ./commit.sh'
 alias not='actualizardiasynotas && cd ~/projects/notas '
 alias cr='actualizardiasynotas && echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
-alias nre='actualizardiasynotas && cd ~/projects/notas && v info/recordatorio.md'
+alias nr='actualizardiasynotas && cd ~/projects/notas && v info/recordatorio.md'
 alias nreg='actualizardiasynotas && cd ~/projects/notas && tail -34 info/recordatorio.md'
 alias nrec='actualizardiasynotas && echo Type your comment to the file && read input && cd ~/projects/notas && echo ${year}-${month}-${day} ${init} - $input >> info/recordatorio.md '
 alias nge='actualizardiasynotas && cd ~/projects/notas && v info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
@@ -147,6 +148,9 @@ alias cgeot='cd ~/projects/geoselfie/geoselfie-github/Testend2end && code .'
 alias cgeol='cd ~/projects/geoselfie/geoselfie-github/Promotions-Lambda && code .'
 alias cgeonode='sudo n 12 && nodemon index.js && code .'
 
+## SSH Config
+eval `ssh-agent`
+ssh-add ~/.ssh/david
 
 
 
@@ -215,3 +219,5 @@ source /home/davidvalorwork/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+clear
+echo "Bienvenido David Valor"
