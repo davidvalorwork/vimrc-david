@@ -55,6 +55,8 @@ sudo pip install --user pynvim --upgrade
 # OPENING VIM
 sudo nvim ~/.vimrc +'PlugInstall' +qa
 sudo nvim ~/.vimrc +'CocInstall coc-snippets' +qa
+sudo nvim ~/.vimrc +'CocInstall prettier' +qa
 sleep 2
 mv ~/projects/vimrc-david/.zshrc ~
 mv ~/notas ~/projects/notas
+zsh

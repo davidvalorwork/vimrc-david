@@ -222,7 +222,7 @@ alias python3='python'
 #export ANDROID_HOME=/home/davidvalorwork/Android/Sdk
 #export ZSH_DISABLE_COMPFIX=true
 #source /home/davidvalorwork/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /home/davidvalorwork/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # Load Angular CLI autocompletion.
