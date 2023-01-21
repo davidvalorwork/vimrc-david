@@ -91,7 +91,7 @@ alias kat2='v ~/projects/notas/info/other/social/sargin/kat2.md'
 alias nd='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && v $year/$month/$day.md'
 alias ndc='read input  && year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && echo ${year}-${month}-${day} ${init} - $input >> $year/$month/$day.md'
 alias ndg='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && tail -34 $year/$month/$day.md'
-alias notcar='v ~/projects/notas/info/carro.md'
+alias ncar='v ~/projects/notas/info/carro.md'
 alias notconse='v ~/projects/notas/info/other/finanzas/programacion/consejos.md'
 alias notvim='v ~/projects/notas/info/other/finanzas/programacion/vim.md'
 alias nbut='v ~/projects/notas/info/butterfly.md'
@@ -232,3 +232,4 @@ echo "Bienvenido David Valor"
 echo "Using zsh phone"
 echo "Recuerda anotar y programar todo lo que haces"
 echo "Estudia algoritmos con un algoritmo desde aqui"
+export PATH=~/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/d/Library/Android/sdk/platform-tools/:/home/d/.rvm/bin:/opt/mssql-tools/bin:/home/d/Library/Android/sdk/platform-tools/:/home/d/.rvm/bin:/opt/mssql-tools/bin:/home/d/Library/Android/sdk/platform-tools/:/home/d/.rvm/bin:/opt/mssql-tools/bin:/home/d/Library/Android/sdk/platform-tools/:/home/d/.rvm/bin:/opt/mssql-tools/bin
