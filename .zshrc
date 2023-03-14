@@ -154,6 +154,8 @@ alias cgeou='cd /home/geoselfie/Interface && code .'
 alias cgeot='cd ~/projects/geoselfie/geoselfie-github/Testend2end && code .'
 alias cgeol='cd ~/projects/geoselfie/geoselfie-github/Promotions-Lambda && code .'
 alias cgeonode='sudo n 12 && nodemon index.js && code .'
+alias bgo='cd ~/projects/vimrc-david/flashcards/ && node bigo-flashcards.js'
+
 
 ## SSH Config
 eval `ssh-agent`
