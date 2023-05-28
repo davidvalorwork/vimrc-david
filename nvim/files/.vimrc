@@ -16,11 +16,14 @@ so ~/.vim/plugin-config.vim
 so ~/.vim/maps.vim
 
 set bg=dark
-colorscheme badwolf
-let g:airline_powerline_fonts = 1
-let g:gruvbox_contrast_dark = "hard"
+syntax on
+set t_Co=256
+set cursorline
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
+"hi Normal guibg=NONE ctermbg=NONE
 set laststatus=2
 set noshowmode
 

@@ -1,15 +1,36 @@
 let mapleader=" "
 
+function! WSLCopy()
+  " Save the unnamed register and its type.
+  let last_yank = getreg()
+  let last_yank_type = getregtype()
+
+  " Copy the selection.
+  execute "normal! y"
+  " Add carriage returns for Windows, and send the text to the clipboard.
+  let windows_text = getreg()->substitute("\n", "\r\n", "g")
+  silent execute system("clip.exe", windows_text)
+
+  " Restore the unnamed register.
+  call setreg('"', last_yank, last_yank_type)
+endfunction
+
+" Use <CMD> instead of : to avoid executing on a visual range.
+noremap <Leader>y <CMD>call WSLCopy()<CR>
+
 " Coc Prettier
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
 
 " For vim shortcuts
+nnoremap <Leader>up :source ~/.vimrc<CR>
 nnoremap <Leader>vim :edit ~/.vimrc<CR>
 nnoremap <Leader>vimm :edit ~/.vim/maps.vim<CR>
 nnoremap <Leader>vimp :edit ~/.vim/plugins.vim<CR>
 nnoremap <Leader>co :edit ~/x<CR>
 nnoremap <Leader>e :edit .<CR>
+
+nnoremap <Leader>vim :cd ~/c<CR>
 
 " For projects
 nnoremap <Leader>pn :cd ~/projects/notas<CR>
@@ -38,7 +59,7 @@ nnoremap <Leader>< 10<C-w><
 
 " quick semi
 nnoremap <Leader>; $a;<Esc>
-nnoremap <Leader>w :w <bar> Prettier<CR>
+nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
 

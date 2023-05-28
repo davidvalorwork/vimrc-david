@@ -1,15 +1,21 @@
+alias sshconfig='v ~/.ssh/config'
+alias chatgpt='cmd.exe /c start chrome https://chat.openai.com/chat'
+alias google='read 1 && cmd.exe /c start chrome https://google.com/search\?q\=$1'
+alias youtube='cmd.exe /c start chrome https://youtube.com'
+alias whatsapp='cmd.exe /c start chrome https://web.whatsapp.com'
+alias sgpt='/home/d/.local/bin/sgpt'
 # Variables
 actualizardiasynotas(){
-  year=$(date '+%Y')
-  month=$(date '+%m')
-  day=$(date '+%d')
-  init=`date +%H:%M`
-  output=/dev/stdout
-  exec 6>&1 # saves stdout
-  exec > /dev/null  # redirect stdout to /dev/null
-  exec 1>&6 6>&- # restore stdout
-  cd ~/projects/notas
-  ~/projects/notas/commit.sh & 
+#  year=$(date '+%Y')
+#  month=$(date '+%m')
+#  day=$(date '+%d')
+#  init=`date +%H:%M`
+#  output=/dev/stdout
+#  exec 6>&1 # saves stdout
+#  exec > /dev/null  # redirect stdout to /dev/null
+#  exec 1>&6 6>&- # restore stdout
+#  cd ~/projects/notas
+#  ~/projects/notas/commit.sh & 
 }
 syncappgrapp(){
   # FOR WINDOWS
@@ -54,10 +60,10 @@ alias z='v ~/.zshrc && zsh'
 alias keywords='v ~/.zshrc && zsh'
 alias cz='code ~/.zshrc'
 alias h='htop'
-alias vconf='vi ~/.vimrc'
-alias vplug='vi ~/.vim/plugins.vim'
-alias vplugc='vi ~/.vim/plugin-config.vim'
-alias vmap='vi ~/.vim/maps.vim'
+alias vconf='v ~/.vimrc'
+alias vplug='v ~/.vim/plugins.vim'
+alias vplugc='v ~/.vim/plugin-config.vim'
+alias vmap='v ~/.vim/maps.vim'
 alias h='htop'
 alias vimrcdav='cd ~/projects/vimrc-david'
 alias updatezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
@@ -85,6 +91,7 @@ alias notre='actualizardiasynotas && cd ~/projects/notas && v info/recordatorio.
 alias nim='cd ~/projects/notas && v info/other/finanzas/importInf.md'
 alias notdad='cd ~/projects/notas && v info/other/finanzas/airtmdad.md'
 alias ngr='cd ~/projects/notas && v info/other/finanzas/programacion/gruposip_casos.md'
+alias nalt='cd ~/projects/notas && v info/other/finanzas/programacion/altyro/altyro.md'
 alias ngrc='actualizardiasynotas && echo Type your comment to the file && read input && cd ~/projects/notas && echo ${year}-${month}-${day} ${init} - $input >> info/other/finanzas/programacion/gruposip_casos.md && echo ${year}-${month}-${day} ${init} - $input >> $year/$month/$day.md'
 alias nor='cd ~/projects/notas && v info/organization_system.md'
 alias kat2='v ~/projects/notas/info/other/social/sargin/kat2.md'
@@ -96,7 +103,7 @@ alias notconse='v ~/projects/notas/info/other/finanzas/programacion/consejos.md'
 alias notvim='v ~/projects/notas/info/other/finanzas/programacion/vim.md'
 alias nbut='v ~/projects/notas/info/butterfly.md'
 ## Enter in repos Geoselfie
-alias gea='cd ~/projects/geoselfie/geoselfie-github/AWS'
+alias gea='cd ~/projects/geoselfie/geoselfie-github/aws'
 alias gelo='cd ~/projects/geoselfie/geoselfie-github/logs'
 alias geb='cd ~/projects/geoselfie/geoselfie-github/Backend'
 alias ges='cd ~/projects/geoselfie/geoselfie-github/Server'
@@ -158,12 +165,13 @@ alias cgeonode='sudo n 12 && nodemon index.js && code .'
 ## SSH Config
 eval `ssh-agent`
 ssh-add ~/.ssh/david
+clear
 
 
 
 ### OTHER CONFIGS NOT IMPORTANT
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="eastwood"
 plugins=(
   git
   zsh-autosuggestions
@@ -212,8 +220,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 #export PATH=”/root/.local/bin:/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/root/Library/Android/sdk/platform-tools/:/root/.fzf/bin:/root/.rvm/bin:/root/Library/Android/sdk/emulator:/root/Library/Android/sdk/tools:/root/Library/Android/sdk/tools/bin:/root/Library/Android/sdk/platform-tools:/root/Library/Android/sdk/platform-tools/:/root/.rvm/bin:/root/Library/Android/sdk/emulator:/root/Library/Android/sdk/tools:/root/Library/Android/sdk/tools/bin:/root/Library/Android/sdk/platform-tools:/opt/mssql-tools/bin”‘
 #
 export PATH="$PATH:/opt/mssql-tools/bin"
-alias python3='python'
-#source $HOME/.cargo/env
 #export PATH=~/.local/bin:$PATH
 #export ANDROID_HOME=$HOME/Android/Sdk
 #export PATH=$PATH:$ANDROID_HOME/toolst
@@ -223,13 +229,14 @@ alias python3='python'
 #export ZSH_DISABLE_COMPFIX=true
 #source /home/davidvalorwork/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "~/.cargo/env"
 
 
 # Load Angular CLI autocompletion.
 #source <(ng completion script)
+nvm use 14
 clear
-echo "Bienvenido David Valor"
-echo "Using zsh phone"
-echo "Recuerda anotar y programar todo lo que haces"
-echo "Estudia algoritmos con un algoritmo desde aqui"
-export PATH=~/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/d/Library/Android/sdk/platform-tools/:/home/d/.rvm/bin:/opt/mssql-tools/bin:/home/d/Library/Android/sdk/platform-tools/:/home/d/.rvm/bin:/opt/mssql-tools/bin:/home/d/Library/Android/sdk/platform-tools/:/home/d/.rvm/bin:/opt/mssql-tools/bin:/home/d/Library/Android/sdk/platform-tools/:/home/d/.rvm/bin:/opt/mssql-tools/bin
+echo "☕ Bienvenido ${RED}David Valor${NC}"
+echo "👨‍💻 ${RED}Full Stack Developer${NC}"
+echo "📚 ${RED}NodeJS${NC} ${GREEN}v$(node -v)${NC}"
+#export DOCKER_HOST=tcp://localhost:2375

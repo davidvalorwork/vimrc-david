@@ -1,9 +1,9 @@
 call plug#begin('~/.vim/plugged')
 
 " syntax
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'norcalli/nvim-colorizer.lua'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -33,7 +33,6 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " autocomplete
 Plug 'sirver/ultisnips'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " test
 Plug 'tyewang/vimux-jest-test'
@@ -54,6 +53,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'preservim/tagbar'
-Plug 'glepnir/dashboard-nvim'
+Plug 'github/copilot.vim'
 
 call plug#end()
