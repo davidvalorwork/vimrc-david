@@ -161,12 +161,10 @@ alias cgeou='cd /home/geoselfie/Interface && code .'
 alias cgeot='cd ~/projects/geoselfie/geoselfie-github/Testend2end && code .'
 alias cgeol='cd ~/projects/geoselfie/geoselfie-github/Promotions-Lambda && code .'
 alias cgeonode='sudo n 12 && nodemon index.js && code .'
-alias bgo='cd ~/projects/vimrc-david/flashcards/ && node bigo-flashcards.js'
-
 
 ## SSH Config
-eval `ssh-agent`
-ssh-add ~/.ssh/david
+#eval `ssh-agent`
+#ssh-add ~/.ssh/david
 clear
 
 
@@ -231,14 +229,13 @@ export PATH="$PATH:/opt/mssql-tools/bin"
 #export ZSH_DISABLE_COMPFIX=true
 #source /home/davidvalorwork/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source "~/.cargo/env"
+#source "~/.cargo/env"
 
 
 # Load Angular CLI autocompletion.
 #source <(ng completion script)
-nvm use 14
+#nvm use 14
 clear
 echo "☕ Bienvenido ${RED}David Valor${NC}"
 echo "👨‍💻 ${RED}Full Stack Developer${NC}"
 echo "📚 ${RED}NodeJS${NC} ${GREEN}v$(node -v)${NC}"
-#export DOCKER_HOST=tcp://localhost:2375
