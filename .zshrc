@@ -1,6 +1,17 @@
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 alias sshconfig='v ~/.ssh/config'
+alias sshcw='v /mnt/c/Users/Ido/.ssh/config'
 alias chatgpt='cmd.exe /c start chrome https://chat.openai.com/chat'
 alias google='read 1 && cmd.exe /c start chrome https://google.com/search\?q\=$1'
+alias awsch='cmd.exe /c start chrome https://d-9767053cf1.awsapps.com/start/#/saml/custom/044947992737%20%28Development%20AWS%20Account%29/NTU1NzA1Mjc1OTQ3X2lucy1kNzY1NWIxZjY2MGQyODE5X3AtYWIyZTRkMWE5ZTZjYWExYw%3D%3D'
+alias awslambdach='$(cmd.exe /c start chrome "https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions")'
 alias youtube='cmd.exe /c start chrome https://youtube.com'
 alias whatsapp='cmd.exe /c start chrome https://web.whatsapp.com'
 alias sgpt='/home/d/.local/bin/sgpt'
@@ -104,9 +115,9 @@ alias notvim='v ~/projects/notas/info/other/finanzas/programacion/vim.md'
 alias nbut='v ~/projects/notas/info/butterfly.md'
 ## Enter in repos Geoselfie
 alias gea='cd ~/projects/geoselfie/geoselfie-github/aws'
+alias ges='cd /mnt/d/projects/geoselfie/geoselfie-github/Server'
 alias gelo='cd ~/projects/geoselfie/geoselfie-github/logs'
 alias geb='cd ~/projects/geoselfie/geoselfie-github/Backend'
-alias ges='cd ~/projects/geoselfie/geoselfie-github/Server'
 alias gec='cd ~/projects/geoselfie/geoselfie-github/Console'
 alias gus='cd ~/projects/geoselfie/geoselfie-github/Users'
 alias gu='cd /home/geoselfie/Interface'
@@ -129,10 +140,10 @@ alias status='cd /home/geoselfie/Interface && bash services/status.sh'
 alias restart='cd /home/geoselfie/Interface && bash services/restart.sh'
 alias menu='cd ~/projects/geoselfie/geoselfie-github/AWS && bash menu.sh'
 ## Enter in repos Gruposip
-alias graf='cd ~/projects/gruposip/analytiko_app/front'
+alias graf='cd /mnt/d/projects/gruposip/analytiko_app/front'
 alias grap='cd ~/projects/gruposip/app-analytiko'
 alias nglimit='node --max_old_space_size=1100 ./node_modules/@angular/cli/bin/ng serve'
-alias grab='cd ~/projects/gruposip/analytiko-backend'
+alias grab='cd /mnt/d/projects/gruposip/analytiko-backend'
 alias grdeldb='cd ../scripts && bash drop-databases.sh V1su4l1z4c10nm3m0r1z && cd ../back'
 alias grnode='nodemon app.js --prod'
 alias grmss='systemctl start mssql-server'
@@ -165,13 +176,10 @@ alias cgeonode='sudo n 12 && nodemon index.js && code .'
 ## SSH Config
 #eval `ssh-agent`
 #ssh-add ~/.ssh/david
-clear
-
-
 
 ### OTHER CONFIGS NOT IMPORTANT
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="eastwood"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
   git
   zsh-autosuggestions
@@ -234,8 +242,7 @@ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighti
 
 # Load Angular CLI autocompletion.
 #source <(ng completion script)
-#nvm use 14
-clear
-echo "☕ Bienvenido ${RED}David Valor${NC}"
-echo "👨‍💻 ${RED}Full Stack Developer${NC}"
-echo "📚 ${RED}NodeJS${NC} ${GREEN}v$(node -v)${NC}"
+export PATH="$HOME/.local/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

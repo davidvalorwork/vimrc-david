@@ -19,11 +19,11 @@ set bg=dark
 syntax on
 set t_Co=256
 set cursorline
-colorscheme onehalfdark
+colorscheme badwolf
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
-"hi Normal guibg=NONE ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 set laststatus=2
 set noshowmode
 
