@@ -6,20 +6,28 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+## SSH CONFIGS
 alias sshconfig='v ~/.ssh/config'
 alias sshcw='v /mnt/c/Users/Ido/.ssh/config'
+## SSH CONFIGS FINISH
+
+# CHROME OPENNING
 alias chatgpt='cmd.exe /c start chrome https://chat.openai.com/chat'
 alias freegpt='cmd.exe /c start chrome https://huggingface.co/spaces/yuntian-deng/ChatGPT'
 alias google='read 1 && cmd.exe /c start chrome https://google.com/search\?q\=$1'
+## AWS ALIAS
 alias awsdv='cmd.exe /c start chrome https://d-9767053cf1.awsapps.com/start/#/saml/custom/044947992737%20%28Development%20AWS%20Account%29/NTU1NzA1Mjc1OTQ3X2lucy1kNzY1NWIxZjY2MGQyODE5X3AtYWIyZTRkMWE5ZTZjYWExYw%3D%3D'
 alias awspd='cmd.exe /c start chrome https://d-9767053cf1.awsapps.com/start/#/saml/custom/171611814742%20%28Production%20AWS%20Account%29/NTU1NzA1Mjc1OTQ3X2lucy04OTM4NGFkMWZkYzljZTc0X3AtMDczOWYzMzMzZWVmN2E5Ng%3D%3D'
+alias awscost='cmd.exe /c start chrome https://us-east-1.console.aws.amazon.com/cost-management/home?region=us-east-1#/dashboard'
 alias awslambda='$(cmd.exe /c start chrome "https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions")'
 alias awsamplifyconsole='$(cmd.exe /c start chrome "https://us-east-1.console.aws.amazon.com/amplify/home?region=us-east-1#/dzm5i1fxm9jar")'
 alias awsamplifyusers='$(cmd.exe /c start chrome "https://us-east-1.console.aws.amazon.com/amplify/home?region=us-east-1#/dzm5oumm9spmq")'
 alias awscloud='$(cmd.exe /c start chrome "https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#")'
+## AWS FINISH
 alias youtube='cmd.exe /c start chrome https://youtube.com'
 alias whatsapp='cmd.exe /c start chrome https://web.whatsapp.com'
 alias sgpt='/home/d/.local/bin/sgpt'
+# CHROME OPENNING Finish
 # Variables
 actualizardiasynotas(){
 #  year=$(date '+%Y')
