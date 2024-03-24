@@ -7,6 +7,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 ## SSH CONFIGS
+alias sudo=''
 alias sshconfig='v ~/.ssh/config'
 alias sshcw='v /mnt/c/Users/Ido/.ssh/config'
 ## SSH CONFIGS FINISH
@@ -16,7 +17,7 @@ alias chatgpt='cmd.exe /c start chrome https://chat.openai.com/chat'
 alias freegpt='cmd.exe /c start chrome https://huggingface.co/spaces/yuntian-deng/ChatGPT'
 alias google='read 1 && cmd.exe /c start chrome https://google.com/search\?q\=$1'
 ## AWS ALIAS
-alias awsdv='cmd.exe /c start chrome https://d-9767053cf1.awsapps.com/start/#/saml/custom/044947992737%20%28Development%20AWS%20Account%29/NTU1NzA1Mjc1OTQ3X2lucy1kNzY1NWIxZjY2MGQyODE5X3AtYWIyZTRkMWE5ZTZjYWExYw%3D%3D'
+alias awsdv='start chrome https://d-9767053cf1.awsapps.com/start/#/saml/custom/044947992737%20%28Development%20AWS%20Account%29/NTU1NzA1Mjc1OTQ3X2lucy1kNzY1NWIxZjY2MGQyODE5X3AtYWIyZTRkMWE5ZTZjYWExYw%3D%3D'
 alias awspd='cmd.exe /c start chrome https://d-9767053cf1.awsapps.com/start/#/saml/custom/171611814742%20%28Production%20AWS%20Account%29/NTU1NzA1Mjc1OTQ3X2lucy04OTM4NGFkMWZkYzljZTc0X3AtMDczOWYzMzMzZWVmN2E5Ng%3D%3D'
 alias awscost='cmd.exe /c start chrome https://us-east-1.console.aws.amazon.com/cost-management/home?region=us-east-1#/dashboard'
 alias awslambda='$(cmd.exe /c start chrome "https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions")'
@@ -38,8 +39,8 @@ actualizardiasynotas(){
 #  exec 6>&1 # saves stdout
 #  exec > /dev/null  # redirect stdout to /dev/null
 #  exec 1>&6 6>&- # restore stdout
-#  cd ~/projects/notas
-#  ~/projects/notas/commit.sh & 
+#  cd ~/Desktop/notas
+#  ~/Desktop/notas/commit.sh & 
 }
 syncappgrapp(){
   # FOR WINDOWS
@@ -78,7 +79,7 @@ alias e=exit
 alias b=bash
 # alias v=vim
 # alias v=code
-alias v=nvim
+alias v=vim
 alias cls=clear
 alias z='v ~/.zshrc && zsh'
 alias keywords='v ~/.zshrc && zsh'
@@ -91,7 +92,7 @@ alias vmap='v ~/.vim/maps.vim'
 alias h='htop'
 alias vimrcdav='cd ~/projects/vimrc-david'
 alias updatezsh='cd ~/projects/vimrc-david && bash update-zsh.sh'
-alias uz='cd ~/projects/vimrc-david && bash update-zsh.sh'
+alias uz='cd ~/vimrc-david && bash update-zsh.sh'
 ## Git
 alias gcom='git add . && echo "Type commit message" && read commitMsj && git commit -m "$commitMsj" && git pull && git push'
 alias gps='git push'
@@ -99,35 +100,35 @@ alias gpl='git pull'
 alias ggu='git gui'
 ## Notas commands
 alias createnotas='cd ~ && git clone git@github.com:davidvalorwork/notas.git'
-alias c='cd ~/projects/notas && ~/projects/notas/commit.sh &'
-alias not='actualizardiasynotas && cd ~/projects/notas '
-alias cr='actualizardiasynotas && echo "Text your message for the crono" && read msj && cd ~/projects/notas && bash ~/projects/notas/crono.sh "$msj"'
-alias nr='actualizardiasynotas && cd ~/projects/notas && v info/recordatorio.md'
-alias nreg='actualizardiasynotas && cd ~/projects/notas && tail -34 info/recordatorio.md'
-alias nrec='actualizardiasynotas && echo Type your comment to the file && read input && cd ~/projects/notas && echo ${year}-${month}-${day} ${init} - $input >> info/recordatorio.md '
-alias nge='actualizardiasynotas && cd ~/projects/notas && v info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
-alias ngeg='actualizardiasynotas && cd ~/projects/notas && tail -34 info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
-alias ngec='actualizardiasynotas && echo Type your comment to the file && read input && cd ~/projects/notas && echo ${year}-${month}-${day} ${init} - $input >> info/other/finanzas/programacion/geoselfie/actividades-por-dia.md  && echo ${year}-${month}-${day} ${init} - $input >> $year/$month/$day.md'
-alias notgeoc='cd ~/projects/notas && v info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
-alias nga='actualizardiasynotas && cd ~/projects/notas && v info/gastos-mensuales.md'
-alias nga='actualizardiasynotas && cd ~/projects/notas && v info/gastos-mensuales.md'
-alias notre='actualizardiasynotas && cd ~/projects/notas && v info/recordatorio.md'
-alias nim='cd ~/projects/notas && v info/other/finanzas/importInf.md'
-alias notdad='cd ~/projects/notas && v info/other/finanzas/airtmdad.md'
-alias ngr='cd ~/projects/notas && v info/other/finanzas/programacion/gruposip_casos.md'
-alias nalt='cd ~/projects/notas && v info/other/finanzas/programacion/altyro/altyro.md'
-alias ngrc='actualizardiasynotas && echo Type your comment to the file && read input && cd ~/projects/notas && echo ${year}-${month}-${day} ${init} - $input >> info/other/finanzas/programacion/gruposip_casos.md && echo ${year}-${month}-${day} ${init} - $input >> $year/$month/$day.md'
-alias nor='cd ~/projects/notas && v info/organization_system.md'
-alias kat2='v ~/projects/notas/info/other/social/sargin/kat2.md'
-alias nd='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && v $year/$month/$day.md'
-alias ndc='read input  && year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && echo ${year}-${month}-${day} ${init} - $input >> $year/$month/$day.md'
-alias ndg='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/projects/notas && tail -34 $year/$month/$day.md'
-alias ncar='v ~/projects/notas/info/carro.md'
-alias notconse='v ~/projects/notas/info/other/finanzas/programacion/consejos.md'
-alias notvim='v ~/projects/notas/info/other/finanzas/programacion/vim.md'
-alias nbut='v ~/projects/notas/info/butterfly.md'
+alias c='cd ~/Desktop/notas && ~/Desktop/notas/commit.sh'
+alias not='actualizardiasynotas && cd ~/Desktop/notas '
+alias cr='actualizardiasynotas && echo "Text your message for the crono" && read msj && cd ~/Desktop/notas && bash ~/Desktop/notas/crono.sh "$msj"'
+alias nr='actualizardiasynotas && cd ~/Desktop/notas && v info/recordatorio.md'
+alias nreg='actualizardiasynotas && cd ~/Desktop/notas && tail -34 info/recordatorio.md'
+alias nrec='actualizardiasynotas && echo Type your comment to the file && read input && cd ~/Desktop/notas && echo ${year}-${month}-${day} ${init} - $input >> info/recordatorio.md '
+alias nge='actualizardiasynotas && cd ~/Desktop/notas && v info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
+alias ngeg='actualizardiasynotas && cd ~/Desktop/notas && tail -34 info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
+alias ngec='actualizardiasynotas && echo Type your comment to the file && read input && cd ~/Desktop/notas && echo ${year}-${month}-${day} ${init} - $input >> info/other/finanzas/programacion/geoselfie/actividades-por-dia.md  && echo ${year}-${month}-${day} ${init} - $input >> $year/$month/$day.md'
+alias notgeoc='cd ~/Desktop/notas && v info/other/finanzas/programacion/geoselfie/actividades-por-dia.md'
+alias nga='actualizardiasynotas && cd ~/Desktop/notas && v info/gastos-mensuales.md'
+alias nga='actualizardiasynotas && cd ~/Desktop/notas && v info/gastos-mensuales.md'
+alias notre='actualizardiasynotas && cd ~/Desktop/notas && v info/recordatorio.md'
+alias nim='cd ~/Desktop/notas && v info/other/finanzas/importInf.md'
+alias notdad='cd ~/Desktop/notas && v info/other/finanzas/airtmdad.md'
+alias ngr='cd ~/Desktop/notas && v info/other/finanzas/programacion/gruposip_casos.md'
+alias nalt='cd ~/Desktop/notas && v info/other/finanzas/programacion/altyro/altyro.md'
+alias ngrc='actualizardiasynotas && echo Type your comment to the file && read input && cd ~/Desktop/notas && echo ${year}-${month}-${day} ${init} - $input >> info/other/finanzas/programacion/gruposip_casos.md && echo ${year}-${month}-${day} ${init} - $input >> $year/$month/$day.md'
+alias nor='cd ~/Desktop/notas && v info/organization_system.md'
+alias kat2='v ~/Desktop/notas/info/other/social/sargin/kat2.md'
+alias nd='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/Desktop/notas && v $year/$month/$day.md'
+alias ndc='read input  && year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/Desktop/notas && echo ${year}-${month}-${day} ${init} - $input >> $year/$month/$day.md'
+alias ndg='year=$(date "+%Y") && month=$(date "+%m") && day=$(date "+%d") && cd ~/Desktop/notas && tail -34 $year/$month/$day.md'
+alias ncar='v ~/Desktop/notas/info/carro.md'
+alias notconse='v ~/Desktop/notas/info/other/finanzas/programacion/consejos.md'
+alias notvim='v ~/Desktop/notas/info/other/finanzas/programacion/vim.md'
+alias nbut='v ~/Desktop/notas/info/butterfly.md'
 ## Enter in repos Geoselfie
-alias gea='cd ~/projects/geoselfie/geoselfie-github/aws'
+alias gea='cd ~/Desktop/aws'
 alias ges='cd ~/projects/geoselfie/geoselfie-github/Server'
 alias geso='cd ~/projects/geoselfie/geoselfie-github/Geoselfie_Source'
 alias gelo='cd ~/projects/geoselfie/geoselfie-github/logs'
@@ -154,10 +155,12 @@ alias status='cd /home/geoselfie/Interface && bash services/status.sh'
 alias restart='cd /home/geoselfie/Interface && bash services/restart.sh'
 alias menu='cd ~/projects/geoselfie/geoselfie-github/AWS && bash menu.sh'
 ## Enter in repos Gruposip
-alias graf='cd ~/projects/gruposip/analytiko_app/front'
-alias grap='cd ~/projects/gruposip/app-analytiko'
+alias graf='cd ~/Desktop/analytiko_app/front'
+alias lgpt='cd ~/Desktop/localGPTdavid'
+alias grap='cd ~/Desktop/app-analytiko'
 alias nglimit='node --max_old_space_size=1100 ./node_modules/@angular/cli/bin/ng serve'
-alias grab='cd ~/projects/gruposip/analytiko-backend'
+alias grab='cd ~/Desktop/analytiko-backend'
+alias gram='cd ~/Desktop/malla-api'
 alias grdeldb='cd ../scripts && bash drop-databases.sh V1su4l1z4c10nm3m0r1z && cd ../back'
 alias grnode='nodemon app.js --prod'
 alias grmss='systemctl start mssql-server'
@@ -260,3 +263,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/david # david
+#ssh-add ~/.ssh/id_rsa # geoselfie
+cd desktop

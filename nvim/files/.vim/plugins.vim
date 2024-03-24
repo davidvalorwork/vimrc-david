@@ -27,13 +27,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 
-" tmux
-Plug 'benmills/vimux'
-Plug 'christoomey/vim-tmux-navigator'
-
-" autocomplete
-Plug 'sirver/ultisnips'
-
 " test
 Plug 'tyewang/vimux-jest-test'
 Plug 'janko-m/vim-test'

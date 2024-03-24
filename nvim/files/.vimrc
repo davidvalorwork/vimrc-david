@@ -19,7 +19,7 @@ set bg=dark
 syntax on
 set t_Co=256
 set cursorline
-colorscheme badwolf
+colorscheme gruvbox
 let g:airline_theme='onehalfdark'
 let g:airline_powerline_fonts = 1
 let g:airline_symbols = {}
