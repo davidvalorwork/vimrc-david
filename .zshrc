@@ -189,6 +189,7 @@ alias cgeou='cd /home/geoselfie/Interface && code .'
 alias cgeot='cd ~/projects/geoselfie/geoselfie-github/Testend2end && code .'
 alias cgeol='cd ~/projects/geoselfie/geoselfie-github/Promotions-Lambda && code .'
 alias cgeonode='sudo n 12 && nodemon index.js && code .'
+alias top150='cd ~/Desktop/notas/2024/03 && vim 24.md'
 
 ## SSH Config
 #eval `ssh-agent`
@@ -264,6 +265,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(ssh-agent -s)"
-#ssh-add ~/.ssh/david # david
-ssh-add ~/.ssh/id_rsa # geoselfie
+ssh-add ~/.ssh/david # david
+#ssh-add ~/.ssh/id_rsa # geoselfie
 cd desktop
